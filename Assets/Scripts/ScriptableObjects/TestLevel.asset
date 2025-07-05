@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28cea43f75dbad648b7dd77a953c3d70, type: 3}
+  m_Name: TestLevel
+  m_EditorClassIdentifier: 
+  level: 0
+  cols: 7
+  rows: 7
+  spots:
+  - {x: 3, y: 0}
+  - {x: 5, y: 1}
+  - {x: 2, y: 2}
+  - {x: 0, y: 6}
+  startPos: {x: 5, y: 0}
+  tilePrefab: {fileID: 3670916398354334268, guid: d84e696c829392b47b56a16c64161593,
+    type: 3}
+  spotPrefab: {fileID: 6229941565162680314, guid: 39bb17d24609dcb4f84cd4946445a548,
+    type: 3}
