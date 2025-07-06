@@ -23,5 +23,5 @@ MonoBehaviour:
   startPos: {x: 5, y: 0}
   tilePrefab: {fileID: 3670916398354334268, guid: d84e696c829392b47b56a16c64161593,
     type: 3}
-  spotPrefab: {fileID: 6229941565162680314, guid: 39bb17d24609dcb4f84cd4946445a548,
+  spotPrefab: {fileID: 6229941565162680314, guid: fbbf4755f08b2cb42a930b74f5caf206,
     type: 3}
