@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
             Rotate(-90);
         if (speed < 1f)
             return;
-        transform.Translate(Vector3.right * (speed * Time.deltaTime));
+        transform.Translate(Vector3.forward * (speed * Time.deltaTime));
     }
 
     public void Run()

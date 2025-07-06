@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public List<Level> levels = new List<Level>();
     private Level currentLevel;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject wall;
     private List<GameObject> tiles = new List<GameObject>();
     private List<GameObject> stains = new List<GameObject>();
     public void StartGame()
@@ -24,6 +25,7 @@ public class LevelManager : MonoBehaviour
         {
             for (int j = 0; j < currentLevel.cols; j++)
             {
+                Instantiate(wall, new Vector3(-1, 0, j), Quaternion.identity);
                 go = Instantiate(currentLevel.tilePrefab, new Vector3(i, 0, j), Quaternion.identity);
                 tiles.Add(go);
                 if (currentLevel.spots.Contains(new Vector2(i, j)))
@@ -32,7 +34,9 @@ public class LevelManager : MonoBehaviour
                     stains.Add(go);
                 }
             }
+            Instantiate(wall, new Vector3(i, 0, currentLevel.cols), Quaternion.identity);
         }
+        
         player.transform.position = new Vector3(currentLevel.startPos.x, 1, currentLevel.startPos.y);
     }
 

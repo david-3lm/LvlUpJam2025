@@ -22,11 +22,12 @@ public class GameManager : MonoBehaviour
             CheckPlayerPosition();
     }
 
+
     private void CheckPlayerPosition()
     {
         int playerX = (int)(player.transform.position.x + 0.5f);
         int playerY = (int)(player.transform.position.z + 0.5f);
-        Debug.Log(playerX + ", " + playerY);
+        
         levelManager.CheckStain(playerX, playerY);
     }
 }
