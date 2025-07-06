@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Stain : MonoBehaviour
 {
+    
+    //NO FUNCIONMA
     private void OnCollisionEnter(Collision other)
     {
         Debug.Log("mori");
