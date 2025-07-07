@@ -361,6 +361,7 @@ sysinfo.txt
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+.vsconfig/*
 # User-specific files
 *.rsuser
 *.userosscache
