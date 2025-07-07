@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1089515215177255702}
   - component: {fileID: 4027844424099773923}
-  - component: {fileID: 5652151902547350790}
+  - component: {fileID: 2965078190580603917}
   m_Layer: 0
   m_Name: Mesa1x1
   m_TagString: Untagged
@@ -54,8 +54,8 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5652151902547350790
+  m_Center: {x: 0, y: 0.8, z: 0}
+--- !u!114 &2965078190580603917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6229941565162680314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b99290c1334e5e4ab1a9c3cc248286f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b11c82d259cee64a944b998136bfa9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7352836335937543821
@@ -98,7 +98,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d64a8b4f26c46324a82d0c23fb315d5d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.52
+      value: 0.471
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d64a8b4f26c46324a82d0c23fb315d5d,
         type: 3}
