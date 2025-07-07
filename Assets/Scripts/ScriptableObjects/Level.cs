@@ -10,7 +10,7 @@ public class Level : ScriptableObject
     public int rows;
     public List<Vector2> spots;
     public Vector2 startPos;
-    
+
     public GameObject tilePrefab;
     public GameObject spotPrefab;
 }
