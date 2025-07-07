@@ -18,7 +18,7 @@ public class LevelManager : MonoBehaviour
         LoadLevel();
     }
     
-    void LoadLevel()
+    public void LoadLevel()
     {
         GameObject go;
         for (int i = 0; i < currentLevel.rows; i++)
