@@ -25,6 +25,10 @@ public class LevelManager : MonoBehaviour
         {
             for (int j = 0; j < currentLevel.cols; j++)
             {
+                if (currentLevel.empty.Contains(new Vector2(i,j)))
+                {
+                    continue;
+                }
                 Instantiate(wall, new Vector3(-1, 0, j), Quaternion.identity);
                 go = Instantiate(currentLevel.tilePrefab, new Vector3(i, 0, j), Quaternion.identity);
                 tiles.Add(go);
