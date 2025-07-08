@@ -16,12 +16,12 @@ public class LevelManager : MonoBehaviour
     private List<GameObject> stains = new List<GameObject>();
     public void StartGame()
     {
-        currentLevel = levels[0];
-        LoadLevel();
+        LoadLevel(0);
     }
     
-    public void LoadLevel()
+    public void LoadLevel(int id)
     {
+        currentLevel = levels[id];
         GameObject go;
         for (int i = 0; i < currentLevel.rows; i++)
         {

@@ -11,6 +11,6 @@ public class Stain : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         Debug.Log("mori");
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 }
