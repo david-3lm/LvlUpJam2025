@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28cea43f75dbad648b7dd77a953c3d70, type: 3}
+  m_Name: Level4
+  m_EditorClassIdentifier: 
+  level: 4
+  cols: 7
+  rows: 9
+  spots:
+  - {x: 3, y: 2}
+  - {x: 5, y: 2}
+  - {x: 5, y: 0}
+  - {x: 7, y: 6}
+  empty: []
+  startPos: {x: 4, y: 6}
+  tilePrefab: {fileID: 3670916398354334268, guid: d84e696c829392b47b56a16c64161593,
+    type: 3}
+  spotPrefab: {fileID: 6229941565162680314, guid: 39bb17d24609dcb4f84cd4946445a548,
+    type: 3}
+  poolFurniture:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  modelNPoss:
+  - model: {fileID: 1120021983230733291, guid: 05b58b887ea9b7742bb39ce8d8527884, type: 3}
+    position: {x: 0, y: 2}
+    rotation: 90
+  - model: {fileID: 4179555347632450434, guid: 632000ffa19bc244db692e7872632d4c, type: 3}
+    position: {x: 5, y: 3}
+    rotation: 0
+  - model: {fileID: 4620157539450659457, guid: 3bb42e3f3dfd38143943f984b369336a, type: 3}
+    position: {x: 2, y: 4}
+    rotation: 0
+  - model: {fileID: 4790957063919975134, guid: 24a32ec6c4d47854db1e2b67b5776662, type: 3}
+    position: {x: 8, y: 0}
+    rotation: 180
+  - model: {fileID: 4790957063919975134, guid: 24a32ec6c4d47854db1e2b67b5776662, type: 3}
+    position: {x: 8, y: 1}
+    rotation: 180

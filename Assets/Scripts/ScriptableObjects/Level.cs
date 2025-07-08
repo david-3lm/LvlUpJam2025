@@ -7,6 +7,7 @@ public class ModelNPos
 {
     public GameObject model;
     public Vector2 position;
+    public float rotation;
 }
 
 [CreateAssetMenu(fileName = "Level", menuName = "ScriptableObjects/LvlSO", order = 1)]

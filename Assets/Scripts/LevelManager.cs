@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class LevelManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class LevelManager : MonoBehaviour
     private Level currentLevel;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject wall;
+    [SerializeField] private GameObject smallWall;
     private List<GameObject> tiles = new List<GameObject>();
     private List<GameObject> stains = new List<GameObject>();
     public void StartGame()
@@ -27,6 +29,7 @@ public class LevelManager : MonoBehaviour
             {
                 if (currentLevel.empty.Contains(new Vector2(i,j)))
                 {
+                    Instantiate(smallWall, new Vector3(i, 0, j), Quaternion.identity);
                     continue;
                 }
                 Instantiate(wall, new Vector3(-1, 0, j), Quaternion.identity);
@@ -40,8 +43,17 @@ public class LevelManager : MonoBehaviour
             }
             Instantiate(wall, new Vector3(i, 0, currentLevel.cols), Quaternion.identity);
         }
-        
         player.transform.position = new Vector3(currentLevel.startPos.x, 1, currentLevel.startPos.y);
+        LoadFurniture();
+    }
+
+    private void LoadFurniture()
+    {
+        foreach (var furniture in currentLevel.modelNPoss)
+        {
+            var go = Instantiate(furniture.model, new Vector3(furniture.position.x, 0, furniture.position.y), Quaternion.identity);
+            go.transform.RotateAround(go.transform.position, Vector3.up, furniture.rotation);
+        }
     }
 
     public void CheckStain(int x, int y)

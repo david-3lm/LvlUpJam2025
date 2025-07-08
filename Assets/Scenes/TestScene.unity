@@ -311,10 +311,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
+  - {fileID: 11400000, guid: 6567b1996f3dc2f4684aa7346680fe76, type: 2}
+  - {fileID: 11400000, guid: ee671ec2ba3ae9645a9e32f0fa91bc56, type: 2}
   - {fileID: 11400000, guid: a6d60dd289c7de84b91c0721dd90442e, type: 2}
+  - {fileID: 11400000, guid: 99a93394dd3323a40be7ff32743c7e49, type: 2}
+  - {fileID: 11400000, guid: ed34ad38ed6833a4f9cf921623a5f217, type: 2}
   - {fileID: 11400000, guid: d4c0a67bd9f0346449cba3e635c61515, type: 2}
   player: {fileID: 216898001}
   wall: {fileID: 1328251398171765519, guid: 25a81dd4f3b07834e8508f9cafaae5b0, type: 3}
+  smallWall: {fileID: 1328251398171765519, guid: 72b2cad0263f857488c8bb1705892215,
+    type: 3}
 --- !u!1 &1347464838
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 3121111763186086454, guid: 73fa01fc373092a4a8adfdd5ded71307,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -6.8
       objectReference: {fileID: 0}
     - target: {fileID: 3121111763186086454, guid: 73fa01fc373092a4a8adfdd5ded71307,
         type: 3}
