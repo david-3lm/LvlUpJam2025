@@ -79,12 +79,12 @@ public class LevelManager : MonoBehaviour
         Transform stainTf = levelRoot.Find($"Stain_{x}_{y}");
         if (stainTf != null)
         {
-            Debug.Log($"Stain found at ({x}, {y})");
+            //Debug.Log($"Stain found at ({x}, {y})");
             Destroy(stainTf.gameObject);
         }
         else
         {
-            Debug.Log($"No stain found at ({x}, {y})");
+            //Debug.Log($"No stain found at ({x}, {y})");
         }
     }
 

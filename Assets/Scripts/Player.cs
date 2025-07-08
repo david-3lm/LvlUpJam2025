@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed { get; private set; }
+    private bool isWaiting = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,15 +54,33 @@ public class Player : MonoBehaviour
     //ROTATE RIGHT 90 ROTATE LEFT -90
     void Rotate(float angle)
     {
-        transform.RotateAround(transform.position, Vector3.up, angle);
+        transform.position = new Vector3(Mathf.Round(transform.position.x), transform.position.y, Mathf.Round(transform.position.z));
+        transform.RotateAround(transform.position, Vector3.up, transform.rotation.y + angle);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("choque con " + collision.gameObject.tag);
+        if (isWaiting)
+            return;
+
         if (collision.gameObject.CompareTag("right"))
+        {
+            Debug.Log("choque con " + collision.gameObject.tag);
             Rotate(90);
+            StartCoroutine(WaitBeforeNextCollision());
+        }
         else if (collision.gameObject.CompareTag("left"))
+        {
+            Debug.Log("choque con " + collision.gameObject.tag);
             Rotate(-90);
+            StartCoroutine(WaitBeforeNextCollision());
+        }
+    }
+
+    private IEnumerator WaitBeforeNextCollision()
+    {
+        isWaiting = true;
+        yield return new WaitForSeconds(0.5f);
+        isWaiting = false;
     }
 }
