@@ -1,69 +1,115 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class LevelManager : MonoBehaviour
 {
-    public List<Level> levels = new List<Level>();
+    [Header("Roots")]
+    [Tooltip("Content for tiles and spots")]
+    [SerializeField] private Transform levelRoot;
+
+    [Tooltip("Content for furniture models")]
+    [SerializeField] private Transform furnatureRoot;
+
+    [Header("Levels list")]
+    [SerializeField] private List<Level> levels = new List<Level>();
     private Level currentLevel;
+
+    [Header("Levels prefabs")]
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject wall;
     [SerializeField] private GameObject smallWall;
-    private List<GameObject> tiles = new List<GameObject>();
-    private List<GameObject> stains = new List<GameObject>();
+
+    private const string PREF_LAST_LEVEL = "LastLevelIndex";
+
+    private void Start()
+    {
+        if (levelRoot == null)
+            Debug.LogError("Level root is not assigned in LevelManager!");
+        if (furnatureRoot == null)
+            Debug.LogError("Furnature root is not assigned in LevelManager!");
+    }
+
     public void StartGame()
     {
-        LoadLevel(0);
+        int last = PlayerPrefs.GetInt(PREF_LAST_LEVEL, 0);
+        LoadLevel(last);
     }
-    
+
     public void LoadLevel(int id)
     {
+        RemoveLevel();
+
+        id = Mathf.Clamp(id, 0, levels.Count - 1);
         currentLevel = levels[id];
-        GameObject go;
+        PlayerPrefs.SetInt(PREF_LAST_LEVEL, id);
+        PlayerPrefs.Save();
+
+        Debug.Log($"Loading level {id}: {currentLevel.name}");
+
         for (int i = 0; i < currentLevel.rows; i++)
         {
             for (int j = 0; j < currentLevel.cols; j++)
             {
-                if (currentLevel.empty.Contains(new Vector2(i,j)))
+                if (currentLevel.empty.Contains(new Vector2(i, j)))
                 {
-                    Instantiate(smallWall, new Vector3(i, 0, j), Quaternion.identity);
-                    continue;
-                }
-                Instantiate(wall, new Vector3(-1, 0, j), Quaternion.identity);
-                go = Instantiate(currentLevel.tilePrefab, new Vector3(i, 0, j), Quaternion.identity);
-                tiles.Add(go);
-                if (currentLevel.spots.Contains(new Vector2(i, j)))
+                    Instantiate(smallWall, new Vector3(i, 0, j), Quaternion.identity, levelRoot);
+                } else
                 {
-                    go = Instantiate(currentLevel.spotPrefab, new Vector3(i, 1, j), Quaternion.identity);
-                    stains.Add(go);
+                    Instantiate(wall, new Vector3(-1, 0, j), Quaternion.identity, levelRoot);
+                    Instantiate(currentLevel.tilePrefab, new Vector3(i, 0, j), Quaternion.identity, levelRoot);
+                    if (currentLevel.spots.Contains(new Vector2(i, j)))
+                        Instantiate(currentLevel.spotPrefab, new Vector3(i, 1, j), Quaternion.identity, levelRoot).name = $"Stain_{i}_{j}";
                 }
             }
-            Instantiate(wall, new Vector3(i, 0, currentLevel.cols), Quaternion.identity);
+            Instantiate(wall, new Vector3(i, 0, currentLevel.cols), Quaternion.identity, levelRoot);
         }
         player.transform.position = new Vector3(currentLevel.startPos.x, 1, currentLevel.startPos.y);
+
         LoadFurniture();
     }
 
     private void LoadFurniture()
     {
         foreach (var furniture in currentLevel.modelNPoss)
-        {
-            var go = Instantiate(furniture.model, new Vector3(furniture.position.x, 0, furniture.position.y), Quaternion.identity);
-            go.transform.RotateAround(go.transform.position, Vector3.up, furniture.rotation);
-        }
+            Instantiate(furniture.model, new Vector3(furniture.position.x, 0, furniture.position.y), Quaternion.Euler(0, furniture.rotation, 0), furnatureRoot);
     }
 
     public void CheckStain(int x, int y)
     {
-        foreach (GameObject go in stains)
+        Transform stainTf = levelRoot.Find($"Stain_{x}_{y}");
+        if (stainTf != null)
         {
-            if ((int)go.transform.position.x == x && (int)go.transform.position.z == y)
-            {
-                go.SetActive(false);
-            }
+            Debug.Log($"Stain found at ({x}, {y})");
+            Destroy(stainTf.gameObject);
         }
+        else
+        {
+            Debug.Log($"No stain found at ({x}, {y})");
+        }
+    }
+
+    public void NextLevel()
+    {
+        int nextIndex = PlayerPrefs.GetInt(PREF_LAST_LEVEL, 0) + 1;
+        if (nextIndex < levels.Count)
+        {
+            LoadLevel(nextIndex);
+        }
+        else
+        {
+            Debug.Log("No more levels available.");
+        }
+    }
+
+    public void RemoveLevel()
+    {
+        void ClearTransform(Transform parent)
+        {
+            for (int i = parent.childCount - 1; i >= 0; i--)
+                Destroy(parent.GetChild(i).gameObject);
+        }
+
+        ClearTransform(levelRoot);
+        ClearTransform(furnatureRoot);
     }
 }

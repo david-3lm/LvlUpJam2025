@@ -624,6 +624,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1404401536056176607, guid: 73756809c436dcb43a3c38113bce68ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1448157539}
+    - target: {fileID: 1404401536056176607, guid: 73756809c436dcb43a3c38113bce68ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2892285208946376165, guid: 73756809c436dcb43a3c38113bce68ae,
         type: 3}
       propertyPath: m_Pivot.x
@@ -788,11 +798,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25862a916d765c348924150291c2a87b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levels:
-  - {fileID: 11400000, guid: d4c0a67bd9f0346449cba3e635c61515, type: 2}
   player: {fileID: 36428858}
   wall: {fileID: 1328251398171765519, guid: 25a81dd4f3b07834e8508f9cafaae5b0, type: 3}
   smallWall: {fileID: 0}
+  levels:
+  - {fileID: 11400000, guid: d4c0a67bd9f0346449cba3e635c61515, type: 2}
 --- !u!4 &1448157540
 Transform:
   m_ObjectHideFlags: 0
