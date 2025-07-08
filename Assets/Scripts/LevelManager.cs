@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Transform levelRoot;
 
     [Tooltip("Content for furniture models")]
-    [SerializeField] private Transform furnatureRoot;
+    [SerializeField] private Transform furnitureRoot;
 
     [Header("Levels list")]
     [SerializeField] private List<Level> levels = new List<Level>();
@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
     {
         if (levelRoot == null)
             Debug.LogError("Level root is not assigned in LevelManager!");
-        if (furnatureRoot == null)
+        if (furnitureRoot == null)
             Debug.LogError("Furnature root is not assigned in LevelManager!");
     }
 
@@ -71,7 +71,7 @@ public class LevelManager : MonoBehaviour
     private void LoadFurniture()
     {
         foreach (var furniture in currentLevel.modelNPoss)
-            Instantiate(furniture.model, new Vector3(furniture.position.x, 0, furniture.position.y), Quaternion.Euler(0, furniture.rotation, 0), furnatureRoot);
+            Instantiate(furniture.model, new Vector3(furniture.position.x, 0, furniture.position.y), Quaternion.Euler(0, furniture.rotation, 0), furnitureRoot);
     }
 
     public void CheckStain(int x, int y)
@@ -110,6 +110,6 @@ public class LevelManager : MonoBehaviour
         }
 
         ClearTransform(levelRoot);
-        ClearTransform(furnatureRoot);
+        ClearTransform(furnitureRoot);
     }
 }
