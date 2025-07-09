@@ -32,6 +32,6 @@ public class Level : ScriptableObject
     public GameObject tilePrefab;
     public GameObject spotPrefab;
     
-    public List<Furniture> poolFurniture;
+    public List<GameObject> poolFurniture;
     public List<ModelNPos> modelNPoss;
 }

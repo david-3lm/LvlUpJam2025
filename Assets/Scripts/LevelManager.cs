@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -18,6 +19,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject wall;
     [SerializeField] private GameObject smallWall;
+    
+    private List<GameObject> furnitureBox;
 
     private const string PREF_LAST_LEVEL = "LastLevelIndex";
 
@@ -27,6 +30,7 @@ public class LevelManager : MonoBehaviour
             Debug.LogError("Level root is not assigned in LevelManager!");
         if (furnitureRoot == null)
             Debug.LogError("Furnature root is not assigned in LevelManager!");
+        furnitureBox = GameObject.FindGameObjectsWithTag("FurnitureBox").ToList();
     }
 
     public void StartGame()
@@ -78,6 +82,12 @@ public class LevelManager : MonoBehaviour
         {
             furniture.model.GetComponent<Furniture>().isDecoration = true;
             Instantiate(furniture.model, new Vector3(furniture.position.x, 0, furniture.position.y), Quaternion.Euler(0, furniture.rotation, 0), furnitureRoot);
+        }
+
+        for (int i = 0; i < currentLevel.poolFurniture.Count; i++)
+        {
+            Instantiate(currentLevel.poolFurniture[i], 
+                new Vector3(furnitureBox[i].transform.position.x, furnitureBox[i].transform.position.y, furnitureBox[i].transform.position.z), Quaternion.identity, Camera.main.transform);
         }
     }
 
