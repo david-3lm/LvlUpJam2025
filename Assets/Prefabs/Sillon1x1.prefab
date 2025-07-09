@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b11c82d259cee64a944b998136bfa9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDecoration: 0
 --- !u!65 &7693152113362511979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -152,7 +153,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -6688952613990753661, guid: d26c41759096540458647c867173d55f,
+      objectReference: {fileID: -6688952613990753661, guid: 4a6f814565506d740951375c3e96d51f,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

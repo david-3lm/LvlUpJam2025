@@ -1026,11 +1026,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7238898768740588170, guid: 73fa01fc373092a4a8adfdd5ded71307,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 82f7c106af5ea5846bab3df9a25afe8f, type: 2}
+    - target: {fileID: 7238898768740588170, guid: 73fa01fc373092a4a8adfdd5ded71307,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: fc0030ac87bfe754c939f50949963f63, type: 2}
     - target: {fileID: 8259216478440164394, guid: 73fa01fc373092a4a8adfdd5ded71307,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8349178525089179025, guid: 73fa01fc373092a4a8adfdd5ded71307,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc75ac48c1af7b84b8b0f980c8b61610, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
