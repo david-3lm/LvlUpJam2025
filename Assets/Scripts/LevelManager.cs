@@ -57,10 +57,13 @@ public class LevelManager : MonoBehaviour
                 {
                     Instantiate(wall, new Vector3(-1, 0, j), Quaternion.identity, levelRoot);
                     Instantiate(currentLevel.tilePrefab, new Vector3(i, 0, j), Quaternion.identity, levelRoot);
+                    Instantiate(smallWall, new Vector3(currentLevel.rows, 0, j), Quaternion.identity, levelRoot);
                     if (currentLevel.spots.Contains(new Vector2(i, j)))
                         Instantiate(currentLevel.spotPrefab, new Vector3(i, 1, j), Quaternion.identity, levelRoot).name = $"Stain_{i}_{j}";
                 }
             }
+            Instantiate(smallWall, new Vector3(i, 0, -1), Quaternion.identity, levelRoot);
+
             Instantiate(wall, new Vector3(i, 0, currentLevel.cols), Quaternion.identity, levelRoot);
         }
         player.transform.position = new Vector3(currentLevel.startPos.x, 1, currentLevel.startPos.y);
