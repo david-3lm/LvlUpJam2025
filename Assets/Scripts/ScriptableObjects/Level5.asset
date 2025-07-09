@@ -31,6 +31,7 @@ MonoBehaviour:
   - {x: 1, y: 7}
   - {x: 2, y: 7}
   startPos: {x: 6, y: 11}
+  direction: 270
   tilePrefab: {fileID: 3670916398354334268, guid: d84e696c829392b47b56a16c64161593,
     type: 3}
   spotPrefab: {fileID: 6229941565162680314, guid: 39bb17d24609dcb4f84cd4946445a548,

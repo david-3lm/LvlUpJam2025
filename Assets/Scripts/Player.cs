@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public float speed { get; private set; }
     private bool isWaiting = false;
+
     // Start is called before the first frame update
     void Start()
     {

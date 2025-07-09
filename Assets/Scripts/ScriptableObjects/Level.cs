@@ -10,6 +10,14 @@ public class ModelNPos
     public float rotation;
 }
 
+public enum Direction
+{
+    North = 0,
+    East = 90,
+    South = 180,
+    West = 270
+}
+
 [CreateAssetMenu(fileName = "Level", menuName = "ScriptableObjects/LvlSO", order = 1)]
 public class Level : ScriptableObject
 {
@@ -19,6 +27,7 @@ public class Level : ScriptableObject
     public List<Vector2> spots;
     public List<Vector2> empty;
     public Vector2 startPos;
+    public Direction direction;
 
     public GameObject tilePrefab;
     public GameObject spotPrefab;

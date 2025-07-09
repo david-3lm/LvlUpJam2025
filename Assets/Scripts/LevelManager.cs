@@ -67,6 +67,7 @@ public class LevelManager : MonoBehaviour
             Instantiate(wall, new Vector3(i, 0, currentLevel.cols), Quaternion.identity, levelRoot);
         }
         player.transform.position = new Vector3(currentLevel.startPos.x, 1, currentLevel.startPos.y);
+        player.transform.rotation = Quaternion.Euler(0, (float)currentLevel.direction, 0f);
 
         LoadFurniture();
     }
