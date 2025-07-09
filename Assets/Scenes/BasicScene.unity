@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelRoot: {fileID: 460315710}
-  furnitureRoot: {fileID: 0}
+  furnitureRoot: {fileID: 886856676}
   levels:
   - {fileID: 11400000, guid: 6567b1996f3dc2f4684aa7346680fe76, type: 2}
   - {fileID: 11400000, guid: ee671ec2ba3ae9645a9e32f0fa91bc56, type: 2}
