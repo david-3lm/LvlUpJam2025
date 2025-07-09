@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(BoxCollider))]
 public class Furniture : MonoBehaviour
@@ -9,9 +10,15 @@ public class Furniture : MonoBehaviour
     private Camera cam;
     private Vector3 offset;
 
+    private Vector3 startPosition;
+    private Transform player;
+    private bool badPosition = false;
+
     private void Start()
     {
         cam = Camera.main;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        startPosition = transform.position;
     }
 
     private void Update()
@@ -38,24 +45,48 @@ public class Furniture : MonoBehaviour
         {
             Vector3 hitPoint = ray.GetPoint(enter);
             transform.position = hitPoint + offset;
-            transform.position = new Vector3((float)Math.Round(transform.position.x), transform.position.y, (float)Math.Round(transform.position.z));
+            transform.position = new Vector3((float)Math.Round(transform.position.x), 0f, (float)Math.Round(transform.position.z));
         }
     }
 
     private void OnMouseDown()
     {
+        transform.SetParent(null);
         isSelected = true;
-        dragPlane = new Plane(Vector3.up, transform.position); // XZ plane at object's current Y
+        dragPlane = new Plane(Vector3.up, Vector3.zero); // XZ plane at object's current Y
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         float enter;
         if (dragPlane.Raycast(ray, out enter))
         {
+            transform.position = ray.GetPoint(enter);
             offset = transform.position - ray.GetPoint(enter);
         }
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.TryGetComponent<Furniture>(out Furniture collider))
+        {
+            badPosition = true;
+        }
+    }
+    
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.TryGetComponent<Furniture>(out Furniture collider))
+        {
+            badPosition = false;
+        }
+    }
+
+
     private void OnMouseUp()
     {
+        if (badPosition)
+        {
+            transform.SetParent(cam.gameObject.transform);
+            transform.position = startPosition;
+        }
         isSelected = false;
     }
 }
