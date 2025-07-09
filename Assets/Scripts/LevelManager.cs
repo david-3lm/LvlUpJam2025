@@ -74,7 +74,10 @@ public class LevelManager : MonoBehaviour
     private void LoadFurniture()
     {
         foreach (var furniture in currentLevel.modelNPoss)
+        {
+            furniture.model.GetComponent<Furniture>().isDecoration = true;
             Instantiate(furniture.model, new Vector3(furniture.position.x, 0, furniture.position.y), Quaternion.Euler(0, furniture.rotation, 0), furnitureRoot);
+        }
     }
 
     public void CheckStain(int x, int y)

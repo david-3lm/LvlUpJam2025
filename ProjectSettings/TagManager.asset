@@ -6,6 +6,7 @@ TagManager:
   tags:
   - left
   - right
+  - Floor
   layers:
   - Default
   - TransparentFX

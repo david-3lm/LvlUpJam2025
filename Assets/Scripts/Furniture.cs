@@ -13,12 +13,13 @@ public class Furniture : MonoBehaviour
     private Vector3 startPosition;
     private Transform player;
     private bool badPosition = false;
+    public bool isDecoration = false;
 
     private void Start()
     {
         cam = Camera.main;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        startPosition = transform.position;
+        startPosition = transform.localPosition;
     }
 
     private void Update()
@@ -51,6 +52,8 @@ public class Furniture : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (isDecoration)
+            return;
         transform.SetParent(null);
         isSelected = true;
         dragPlane = new Plane(Vector3.up, Vector3.zero); // XZ plane at object's current Y
@@ -62,31 +65,44 @@ public class Furniture : MonoBehaviour
             offset = transform.position - ray.GetPoint(enter);
         }
     }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.TryGetComponent<Furniture>(out Furniture collider))
-        {
-            badPosition = true;
-        }
-    }
     
-    private void OnCollisionExit(Collision other)
+    private bool CheckOverlap()
     {
-        if (other.gameObject.TryGetComponent<Furniture>(out Furniture collider))
+        Vector3 center = transform.position + transform.rotation * GetComponent<BoxCollider>().center;
+        Vector3 halfExtents = GetComponent<BoxCollider>().size * 0.5f;
+        Collider[] overlaps = Physics.OverlapBox(center, halfExtents, transform.rotation);
+        foreach (var col in overlaps)
         {
-            badPosition = false;
+            if (col.gameObject != gameObject && !col.gameObject.CompareTag("Floor"))
+            {
+                Debug.Log("Hay overlap con"+ col.gameObject.name);
+                return true;
+            }
         }
+        return false;
     }
-
 
     private void OnMouseUp()
     {
-        if (badPosition)
+        if (CheckOverlap())
         {
             transform.SetParent(cam.gameObject.transform);
-            transform.position = startPosition;
+            transform.localPosition = startPosition;
         }
         isSelected = false;
+    }
+    
+    private void OnDrawGizmos()
+    {
+        if (!isSelected) return;
+
+        BoxCollider box = GetComponent<BoxCollider>();
+        Vector3 center = transform.position + transform.rotation * GetComponent<BoxCollider>().center;
+        Vector3 halfExtents = Vector3.Scale(box.size * 0.5f, transform.lossyScale);
+
+        Gizmos.color = Color.red;
+        Gizmos.matrix = Matrix4x4.TRS(center, transform.rotation, Vector3.one);
+        Gizmos.DrawWireSphere(center, 1f);
+        Gizmos.DrawWireCube(Vector3.zero, halfExtents * 2f); // halfExtents * 2 = full size
     }
 }

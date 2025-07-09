@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5410779576569966381}
   m_Layer: 0
   m_Name: Sofa2x1
-  m_TagString: Untagged
+  m_TagString: left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,8 +65,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 2}
-  m_Center: {x: 0, y: 1, z: 0.5}
+  m_Size: {x: 0.875996, y: 1, z: 1.791565}
+  m_Center: {x: -0.005331695, y: 1, z: 0.5205802}
 --- !u!1001 &9115511372715643883
 PrefabInstance:
   m_ObjectHideFlags: 0

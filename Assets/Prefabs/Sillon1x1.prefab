@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7693152113362511979}
   m_Layer: 0
   m_Name: Sillon1x1
-  m_TagString: Untagged
+  m_TagString: left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
