@@ -17,7 +17,7 @@ public class LevelManager : MonoBehaviour
 
     [Header("Levels list")]
     [SerializeField] private List<Level> levels = new List<Level>();
-     private Level currentLevel;
+    public Level currentLevel;
 
     [Header("Levels prefabs")]
     [SerializeField] private GameObject player;
