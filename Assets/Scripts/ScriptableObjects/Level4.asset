@@ -29,11 +29,11 @@ MonoBehaviour:
     type: 3}
   poolFurniture:
   - model: {fileID: 6229941565162680314, guid: fbbf4755f08b2cb42a930b74f5caf206, type: 3}
-    position: {x: -4, y: -4, z: 3}
+    position: {x: -1.5, y: -4, z: 0.5}
     rotation: {x: -20.7, y: 49, z: -22.2}
   - model: {fileID: 6229941565162680314, guid: fbbf4755f08b2cb42a930b74f5caf206, type: 3}
     position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0}
+    rotation: {x: -20.7, y: 49, z: -22.2}
   modelNPoss:
   - model: {fileID: 1120021983230733291, guid: 05b58b887ea9b7742bb39ce8d8527884, type: 3}
     position: {x: 0, y: 0, z: 2}

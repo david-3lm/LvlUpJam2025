@@ -15,10 +15,13 @@ public class Furniture : MonoBehaviour
     private bool badPosition = false;
     public bool isDecoration = false;
 
+    private Transform furnitureParent;
+
     private void Start()
     {
         cam = Camera.main;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        furnitureParent = transform.parent;
         startPosition = transform.localPosition;
     }
 
@@ -86,7 +89,7 @@ public class Furniture : MonoBehaviour
     {
         if (!isDecoration && CheckOverlap())
         {
-            transform.SetParent(cam.gameObject.transform);
+            transform.SetParent(furnitureParent);
             transform.localPosition = startPosition;
         }
         isSelected = false;

@@ -14,6 +14,8 @@ public class CameraMovement : MonoBehaviour
     bool firstFrame = true;
     bool carFound = false;
 
+    [SerializeField] private bool followPlayer = false;
+
     private void Start()
     {
         playerObject = GameObject.FindGameObjectWithTag("Player");
@@ -39,16 +41,19 @@ public class CameraMovement : MonoBehaviour
     
     void LateUpdate()
     {
-        Vector3 desiredPosition = playerObject.transform.position + offset;
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-        if (playerObject.GetComponent<Player>().speed == 0 && firstFrame)
+        if (followPlayer)
         {
-            transform.position = desiredPosition;
-            firstFrame = false;
+            Vector3 desiredPosition = playerObject.transform.position + offset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            if (playerObject.GetComponent<Player>().speed == 0 && firstFrame)
+            {
+                transform.position = desiredPosition;
+                firstFrame = false;
+            }
+            else if (playerObject.GetComponent<Player>().speed == 0)
+                return;
+            transform.position = smoothedPosition;
         }
-        else if (playerObject.GetComponent<Player>().speed == 0)
-            return;
-        transform.position = smoothedPosition;
     }
 
     void MoveCamera(float speedX, float speedY)
