@@ -12,7 +12,6 @@ public class Furniture : MonoBehaviour
 
     private Vector3 startPosition;
     private Transform player;
-    private bool badPosition = false;
     public bool isDecoration = false;
 
     private Transform furnitureParent;
