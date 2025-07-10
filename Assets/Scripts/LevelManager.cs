@@ -19,6 +19,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<Level> levels = new List<Level>();
     public Level currentLevel;
 
+    private int CountCleaned;
+
     [Header("Levels prefabs")]
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject wall;
@@ -35,6 +37,7 @@ public class LevelManager : MonoBehaviour
         if (furnitureRoot == null)
             Debug.LogError("Furnature root is not assigned in LevelManager!");
         furnitureBox = GameObject.FindGameObjectsWithTag("FurnitureBox").ToList();
+        CountCleaned = 0;
     }
 
     public void StartGame()
@@ -101,11 +104,14 @@ public class LevelManager : MonoBehaviour
         {
             Debug.Log($"Stain found at ({x}, {y})");
             Destroy(stainTf.gameObject);
+            CountCleaned++;
         }
         else
         {
             Debug.Log($"No stain found at ({x}, {y})");
         }
+        if (CountCleaned == currentLevel.spots.Count)
+            NextLevel();
     }
 
     public void NextLevel()
