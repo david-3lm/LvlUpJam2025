@@ -87,7 +87,6 @@ GameObject:
   - component: {fileID: 47958993650185438}
   - component: {fileID: 671390012833565464}
   - component: {fileID: 529966836704488758}
-  - component: {fileID: 4025485860431844263}
   m_Layer: 5
   m_Name: WorldBackground
   m_TagString: Untagged
@@ -178,15 +177,3 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &4025485860431844263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6450022713117869461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77ef9cfb862d984289c60b94f5d0d83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
