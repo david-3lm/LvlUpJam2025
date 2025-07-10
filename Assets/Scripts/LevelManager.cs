@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -11,9 +12,12 @@ public class LevelManager : MonoBehaviour
     [Tooltip("Content for furniture models")]
     [SerializeField] private Transform furnitureRoot;
 
+    [Tooltip("Content for user interactuable furnitures")]
+    [SerializeField] private Transform interactuableFurnitureRoot;
+
     [Header("Levels list")]
     [SerializeField] private List<Level> levels = new List<Level>();
-    private Level currentLevel;
+     private Level currentLevel;
 
     [Header("Levels prefabs")]
     [SerializeField] private GameObject player;
@@ -73,21 +77,20 @@ public class LevelManager : MonoBehaviour
         player.transform.position = new Vector3(currentLevel.startPos.x, 1, currentLevel.startPos.y);
         player.transform.rotation = Quaternion.Euler(0, (float)currentLevel.direction, 0f);
 
-        LoadFurniture();
+        LoadFurniture(currentLevel.poolFurniture, false, interactuableFurnitureRoot, false);
+        LoadFurniture(currentLevel.modelNPoss, true, furnitureRoot, true);
     }
 
-    private void LoadFurniture()
+    private void LoadFurniture(List<ModelNPos> list, bool isDecoration, Transform root, bool flagLocalPosition)
     {
-        foreach (var furniture in currentLevel.modelNPoss)
+        foreach (var item in list)
         {
-            furniture.model.GetComponent<Furniture>().isDecoration = true;
-            Instantiate(furniture.model, new Vector3(furniture.position.x, 0, furniture.position.y), Quaternion.Euler(0, furniture.rotation, 0), furnitureRoot);
-        }
+            GameObject go = Instantiate(item.model, item.position, Quaternion.Euler(item.rotation));
 
-        for (int i = 0; i < currentLevel.poolFurniture.Count; i++)
-        {
-            Instantiate(currentLevel.poolFurniture[i], 
-                new Vector3(furnitureBox[i].transform.position.x, furnitureBox[i].transform.position.y, furnitureBox[i].transform.position.z), Quaternion.identity, Camera.main.transform);
+            var furniture = go.GetComponent<Furniture>();
+            if (furniture != null) furniture.isDecoration = isDecoration;
+
+            go.transform.SetParent(root, flagLocalPosition);
         }
     }
 
@@ -96,12 +99,12 @@ public class LevelManager : MonoBehaviour
         Transform stainTf = levelRoot.Find($"Stain_{x}_{y}");
         if (stainTf != null)
         {
-            //Debug.Log($"Stain found at ({x}, {y})");
+            Debug.Log($"Stain found at ({x}, {y})");
             Destroy(stainTf.gameObject);
         }
         else
         {
-            //Debug.Log($"No stain found at ({x}, {y})");
+            Debug.Log($"No stain found at ({x}, {y})");
         }
     }
 
@@ -128,5 +131,6 @@ public class LevelManager : MonoBehaviour
 
         ClearTransform(levelRoot);
         ClearTransform(furnitureRoot);
+        ClearTransform(interactuableFurnitureRoot);
     }
 }

@@ -6,9 +6,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]LevelManager levelManager;
-    [SerializeField]GameObject player;
-    private Player playerScript;
+    [Header("Level Manager")]
+    [SerializeField] private LevelManager levelManager;
+
+    [Header("Player")]
+    [SerializeField] private GameObject player;
+    [SerializeField] private Player playerScript;
+
     // Start is called before the first frame update
     void Start()
     {

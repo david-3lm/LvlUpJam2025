@@ -6,8 +6,8 @@ using UnityEngine;
 public class ModelNPos
 {
     public GameObject model;
-    public Vector2 position;
-    public float rotation;
+    public Vector3 position;
+    public Vector3 rotation;
 }
 
 public enum Direction
@@ -31,7 +31,18 @@ public class Level : ScriptableObject
 
     public GameObject tilePrefab;
     public GameObject spotPrefab;
-    
-    public List<GameObject> poolFurniture;
+
+    [Header("User Interactuable Furnatures")]
+
+    [Tooltip("This component position works in a range of values: \n"
+        + "| x = (-1.5, 2.5) | y = (-4, 4) | z = (-0.5, 0.5) |\n\n"
+        + "This component rotation works in statics values: \n"
+        + "| x = -20.7 | y = 49 | z = -22.2 |")]
+
+    [Info("This component position works in a range of values: \n"
+        + "| x = (-1.5, 2.5) | y = (-4, 4) | z = (-0.5, 0.5) |\n\n"
+        + "This component rotation works in statics values: \n"
+        + "| x = -20.7 | y = 49 | z = -22.2 |")]
+    [SerializeField] public List<ModelNPos> poolFurniture;
     public List<ModelNPos> modelNPoss;
 }
