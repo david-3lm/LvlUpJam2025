@@ -178,7 +178,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icono_mute
+      name: icon_mute
       rect:
         serializedVersion: 2
         x: 22
@@ -199,7 +199,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icono_pause
+      name: icon_pause
       rect:
         serializedVersion: 2
         x: 589
@@ -220,7 +220,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icono_unmuted
+      name: icon_unmuted
       rect:
         serializedVersion: 2
         x: 1369
@@ -251,11 +251,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      icon_mute: 1161577958
+      icon_pause: 1199405587
       icon_play: -1911347956
       icon_settings: 725721273
-      icono_mute: 1161577958
-      icono_pause: 1199405587
-      icono_unmuted: 426291335
+      icon_unmuted: 426291335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

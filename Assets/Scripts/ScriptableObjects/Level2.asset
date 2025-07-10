@@ -26,7 +26,10 @@ MonoBehaviour:
     type: 3}
   spotPrefab: {fileID: 6229941565162680314, guid: 39bb17d24609dcb4f84cd4946445a548,
     type: 3}
-  poolFurniture: []
+  poolFurniture:
+  - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: -20.7, y: 49, z: -22.2}
   modelNPoss:
   - model: {fileID: 8263716622718047072, guid: a905db6970a14c446a0964cc96bd8dea, type: 3}
     position: {x: 3, y: 0, z: 1}
