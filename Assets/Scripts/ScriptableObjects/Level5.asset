@@ -12,15 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28cea43f75dbad648b7dd77a953c3d70, type: 3}
   m_Name: Level5
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
-  id: 4
-  cols: 13
-  rows: 7
-=======
   level: 5
   cols: 5
   rows: 5
->>>>>>> Stashed changes
   spots:
   - {x: 1, y: 1}
   - {x: 0, y: 2}
