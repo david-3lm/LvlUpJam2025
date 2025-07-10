@@ -16,13 +16,15 @@ public class Furniture : MonoBehaviour
     public bool isDecoration = false;
 
     private Transform furnitureParent;
-
+    
+    private LevelManager levelManager;
     private void Start()
     {
         cam = Camera.main;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         furnitureParent = transform.parent;
         startPosition = transform.localPosition;
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     private void Update()
@@ -59,7 +61,7 @@ public class Furniture : MonoBehaviour
             return;
         transform.SetParent(null);
         isSelected = true;
-        dragPlane = new Plane(Vector3.up, Vector3.zero); // XZ plane at object's current Y
+        dragPlane = new Plane(Vector3.up, Vector3.up); // XZ plane at object's current Y
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         float enter;
         if (dragPlane.Raycast(ray, out enter))
@@ -85,9 +87,21 @@ public class Furniture : MonoBehaviour
         return false;
     }
 
+    private bool IsInsideMap()
+    {
+        int rows = levelManager.currentLevel.rows;
+        int cols = levelManager.currentLevel.cols;
+        if (transform.position.x > rows || transform.position.x < 0f ||
+            transform.position.z > cols || transform.position.z < 0)
+        {
+            return false;
+        }
+        return true;
+    }
+
     private void OnMouseUp()
     {
-        if (!isDecoration && CheckOverlap())
+        if ((!isDecoration && CheckOverlap()) || !IsInsideMap())
         {
             transform.SetParent(furnitureParent);
             transform.localPosition = startPosition;
