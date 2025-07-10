@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         transform.Translate(Vector3.forward * (speed * Time.deltaTime));
     }
 
-    public void SwitchSpeed()
+    public void SwitchMovement()
     { 
         if (speed == 0f)
             Run();
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
             Stop();
     }
 
-    public void SwitchSpeed(bool isMoving)
+    public void SwitchMovement(bool isMoving)
     {
         if (isMoving)
             Stop();
