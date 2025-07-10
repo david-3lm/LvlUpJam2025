@@ -25,7 +25,10 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject wall;
     [SerializeField] private GameObject smallWall;
-    
+
+    [Header("Scripts")]
+    [SerializeField] private Player playerScript;
+
     private List<GameObject> furnitureBox;
 
     private const string PREF_LAST_LEVEL = "LastLevelIndex";
@@ -38,6 +41,7 @@ public class LevelManager : MonoBehaviour
             Debug.LogError("Furnature root is not assigned in LevelManager!");
         furnitureBox = GameObject.FindGameObjectsWithTag("FurnitureBox").ToList();
         CountCleaned = 0;
+        playerScript = player.GetComponent<Player>();
     }
 
     public void StartGame()
@@ -50,7 +54,7 @@ public class LevelManager : MonoBehaviour
     {
         RemoveLevel();
 
-        id = Mathf.Clamp(id, 0, levels.Count - 1);
+        id = Mathf.Clamp(id, 0, levels.Count);
         currentLevel = levels[id];
         PlayerPrefs.SetInt(PREF_LAST_LEVEL, id);
         PlayerPrefs.Save();
@@ -111,12 +115,18 @@ public class LevelManager : MonoBehaviour
             Debug.Log($"No stain found at ({x}, {y})");
         }
         if (CountCleaned == currentLevel.spots.Count)
+        {
             NextLevel();
+            CountCleaned = 0;
+            playerScript.Stop();
+        }
     }
 
     public void NextLevel()
     {
-        int nextIndex = PlayerPrefs.GetInt(PREF_LAST_LEVEL, 0) + 1;
+        //int nextIndex = PlayerPrefs.GetInt(PREF_LAST_LEVEL, 0) + 1;
+        int nextIndex = currentLevel.id + 1;
+        Debug.Log("current level id +1 ---> " + (currentLevel.id + 1));
         if (nextIndex < levels.Count)
         {
             LoadLevel(nextIndex);
@@ -138,5 +148,10 @@ public class LevelManager : MonoBehaviour
         ClearTransform(levelRoot);
         ClearTransform(furnitureRoot);
         ClearTransform(interactuableFurnitureRoot);
+    }
+
+    public void ReloadLevel()
+    {
+        LoadLevel(currentLevel.id);
     }
 }
