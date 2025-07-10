@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28cea43f75dbad648b7dd77a953c3d70, type: 3}
   m_Name: Level2
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   id: 1
+=======
+  id: 0
+>>>>>>> Stashed changes
   cols: 9
   rows: 4
   spots:
@@ -33,7 +37,7 @@ MonoBehaviour:
   modelNPoss:
   - model: {fileID: 8263716622718047072, guid: a905db6970a14c446a0964cc96bd8dea, type: 3}
     position: {x: 3, y: 0, z: 1}
-    rotation: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 180, z: 0}
   - model: {fileID: 6229941565162680314, guid: fbbf4755f08b2cb42a930b74f5caf206, type: 3}
     position: {x: 3, y: 0, z: 8}
     rotation: {x: 0, y: 0, z: 0}
