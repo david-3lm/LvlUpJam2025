@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
     private IEnumerator WaitBeforeNextCollision()
     {
         isWaiting = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.05f);
         isWaiting = false;
     }
 }

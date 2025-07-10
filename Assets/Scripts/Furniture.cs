@@ -84,7 +84,7 @@ public class Furniture : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (CheckOverlap())
+        if (!isDecoration && CheckOverlap())
         {
             transform.SetParent(cam.gameObject.transform);
             transform.localPosition = startPosition;

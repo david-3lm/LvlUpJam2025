@@ -46,4 +46,4 @@ MonoBehaviour:
     rotation: {x: 0, y: 0, z: 0}
   - model: {fileID: 8274922205884750740, guid: 646f2ef60d742c94fa92ce4a52838843, type: 3}
     position: {x: 0, y: 0, z: 9}
-    rotation: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 90, z: 0}
