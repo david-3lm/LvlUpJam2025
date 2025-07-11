@@ -5,20 +5,23 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed { get; private set; }
+    public float speed { get; set; }
     private bool isWaiting = false;
     
     private Animator animator;
+    
+    [SerializeField]private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         speed = 0f;
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         //if (Input.GetKeyDown(KeyCode.Space) && speed == 0f)
@@ -33,7 +36,7 @@ public class Player : MonoBehaviour
         
         if (speed < 1f)
             return;
-        transform.Translate(Vector3.forward * (speed * Time.deltaTime));
+        rb.velocity = transform.forward * speed;
     }
 
     public void SwitchMovement()
@@ -54,7 +57,6 @@ public class Player : MonoBehaviour
 
     public void Run()
     {
-        Debug.Log("Run");
         IncreaseSpeed();
         //transform.Translate(Vector3.forward * (speed * Time.deltaTime));
     }
@@ -67,7 +69,6 @@ public class Player : MonoBehaviour
 
     public void Stop()
     {
-        Debug.Log("stop");
         speed = 0f;
     }
 
@@ -87,7 +88,7 @@ public class Player : MonoBehaviour
         {
             if (!animator.GetBool("Crashed"))
                 animator.SetBool("Crashed", true);
-            Debug.Log("choque con " + collision.gameObject.tag);
+            Debug.Log("choque con " + collision.gameObject.name);
             Rotate(90);
             StartCoroutine(WaitBeforeNextCollision());
         }
@@ -95,7 +96,7 @@ public class Player : MonoBehaviour
         {
             if (!animator.GetBool("Crashed"))
                 animator.SetBool("Crashed", true);
-            Debug.Log("choque con " + collision.gameObject.tag);
+            Debug.Log("choque con " + collision.gameObject.name);
             Rotate(-90);
             StartCoroutine(WaitBeforeNextCollision());
         }
