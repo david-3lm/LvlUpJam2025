@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Transform levelRoot;
 
     [Tooltip("Content for furniture models")]
-    [SerializeField] private Transform furnitureRoot;
+    [SerializeField] public Transform furnitureRoot;
 
     [Tooltip("Content for user interactuable furnitures")]
     [SerializeField] private Transform interactuableFurnitureRoot;

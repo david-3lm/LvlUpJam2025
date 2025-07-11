@@ -67,7 +67,7 @@ public class Furniture : MonoBehaviour
     {
         if (isDecoration || isPlaying)
             return;
-        transform.SetParent(null);
+        transform.SetParent(levelManager.furnitureRoot);
         isSelected = true;
         dragPlane = new Plane(Vector3.up, Vector3.up); // XZ plane at object's current Y
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
