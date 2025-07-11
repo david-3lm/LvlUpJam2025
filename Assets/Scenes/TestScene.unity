@@ -24763,6 +24763,7 @@ MonoBehaviour:
   wall: {fileID: 1328251398171765519, guid: 25a81dd4f3b07834e8508f9cafaae5b0, type: 3}
   smallWall: {fileID: 1328251398171765519, guid: 72b2cad0263f857488c8bb1705892215,
     type: 3}
+  playerScript: {fileID: 0}
 --- !u!4 &912314390
 Transform:
   m_ObjectHideFlags: 0
