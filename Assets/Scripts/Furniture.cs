@@ -40,7 +40,7 @@ public class Furniture : MonoBehaviour
         if (isSelected && !isPlaying)
         {
             MoveWithMouse();
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R) || Input.GetMouseButtonDown(1))
                 Rotate(-90);
         }
     }

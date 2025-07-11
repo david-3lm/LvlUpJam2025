@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28cea43f75dbad648b7dd77a953c3d70, type: 3}
+  m_Name: Level13
+  m_EditorClassIdentifier: 
+  id: 12
+  cols: 13
+  rows: 13
+  spots:
+  - {x: 1, y: 0}
+  - {x: 2, y: 1}
+  - {x: 3, y: 7}
+  - {x: 8, y: 1}
+  - {x: 11, y: 9}
+  - {x: 9, y: 11}
+  empty:
+  - {x: 0, y: 8}
+  - {x: 1, y: 8}
+  - {x: 2, y: 8}
+  - {x: 3, y: 8}
+  - {x: 4, y: 8}
+  - {x: 5, y: 8}
+  - {x: 6, y: 8}
+  - {x: 7, y: 8}
+  - {x: 0, y: 9}
+  - {x: 1, y: 9}
+  - {x: 2, y: 9}
+  - {x: 3, y: 9}
+  - {x: 4, y: 9}
+  - {x: 5, y: 9}
+  - {x: 6, y: 9}
+  - {x: 7, y: 9}
+  - {x: 0, y: 10}
+  - {x: 1, y: 10}
+  - {x: 2, y: 10}
+  - {x: 3, y: 10}
+  - {x: 4, y: 10}
+  - {x: 5, y: 10}
+  - {x: 6, y: 10}
+  - {x: 7, y: 10}
+  - {x: 0, y: 11}
+  - {x: 1, y: 11}
+  - {x: 2, y: 11}
+  - {x: 3, y: 11}
+  - {x: 4, y: 11}
+  - {x: 5, y: 11}
+  - {x: 6, y: 11}
+  - {x: 7, y: 11}
+  - {x: 0, y: 12}
+  - {x: 1, y: 12}
+  - {x: 2, y: 12}
+  - {x: 3, y: 12}
+  - {x: 4, y: 12}
+  - {x: 5, y: 12}
+  - {x: 6, y: 12}
+  - {x: 7, y: 12}
+  - {x: 5, y: 0}
+  - {x: 6, y: 0}
+  - {x: 7, y: 0}
+  - {x: 5, y: 1}
+  - {x: 6, y: 1}
+  - {x: 7, y: 1}
+  - {x: 5, y: 2}
+  - {x: 6, y: 2}
+  - {x: 7, y: 2}
+  - {x: 5, y: 3}
+  - {x: 6, y: 3}
+  - {x: 7, y: 3}
+  - {x: 5, y: 4}
+  - {x: 6, y: 4}
+  - {x: 7, y: 4}
+  - {x: 5, y: 5}
+  - {x: 6, y: 5}
+  - {x: 7, y: 5}
+  - {x: 2, y: 5}
+  - {x: 3, y: 5}
+  - {x: 4, y: 5}
+  - {x: 10, y: 5}
+  - {x: 11, y: 5}
+  - {x: 12, y: 5}
+  startPos: {x: 8, y: 6}
+  direction: 90
+  tilePrefab: {fileID: 3670916398354334268, guid: d84e696c829392b47b56a16c64161593,
+    type: 3}
+  spotPrefab: {fileID: 6229941565162680314, guid: 39bb17d24609dcb4f84cd4946445a548,
+    type: 3}
+  poolFurniture:
+  - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    position: {x: -1.5, y: -4, z: -0.5}
+    rotation: {x: -20.7, y: 49, z: -22.2}
+  - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    position: {x: 2.5, y: 4, z: 0.5}
+    rotation: {x: -20.7, y: 49, z: -22.2}
+  - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    position: {x: 0.5, y: 2, z: 0}
+    rotation: {x: -20.7, y: 49, z: -22.2}
+  - model: {fileID: 6074385879219865924, guid: 791503c8ac6215540bc2a6250fbe3520, type: 3}
+    position: {x: -0.5, y: -2, z: 0}
+    rotation: {x: -20.7, y: 49, z: -22.2}
+  - model: {fileID: 4179555347632450434, guid: 632000ffa19bc244db692e7872632d4c, type: 3}
+    position: {x: 1.5, y: -4, z: 0.5}
+    rotation: {x: -20.7, y: 49, z: -22.2}
+  modelNPoss:
+  - model: {fileID: 6131821560707418307, guid: f06034352b350ca4087702f42d76fd6a, type: 3}
+    position: {x: 4, y: 0, z: 3}
+    rotation: {x: 0, y: -90, z: 0}
+  - model: {fileID: 1120021983230733291, guid: 05b58b887ea9b7742bb39ce8d8527884, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 90, z: 0}
+  - model: {fileID: 6131821560707418307, guid: f06034352b350ca4087702f42d76fd6a, type: 3}
+    position: {x: 12, y: 0, z: 3}
+    rotation: {x: 0, y: -90, z: 0}
+  - model: {fileID: 8274922205884750740, guid: 646f2ef60d742c94fa92ce4a52838843, type: 3}
+    position: {x: 9, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0}
+  - model: {fileID: 6229941565162680314, guid: fbbf4755f08b2cb42a930b74f5caf206, type: 3}
+    position: {x: 8, y: 0, z: 8}
+    rotation: {x: 0, y: 90, z: 0}
+  - model: {fileID: 8263716622718047072, guid: a905db6970a14c446a0964cc96bd8dea, type: 3}
+    position: {x: 12, y: 0, z: 11}
+    rotation: {x: 0, y: 180, z: 0}
