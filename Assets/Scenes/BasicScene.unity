@@ -3845,17 +3845,17 @@ PrefabInstance:
     - target: {fileID: 1180941537714840903, guid: ca931fd68b8c81b4e8a199fd75437b74,
         type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.6853885
+      value: 0.17254902
       objectReference: {fileID: 0}
     - target: {fileID: 1180941537714840903, guid: ca931fd68b8c81b4e8a199fd75437b74,
         type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.6886792
+      value: 0.09019608
       objectReference: {fileID: 0}
     - target: {fileID: 1180941537714840903, guid: ca931fd68b8c81b4e8a199fd75437b74,
         type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.58124524
+      value: 0.043137256
       objectReference: {fileID: 0}
     - target: {fileID: 2638832037204285051, guid: ca931fd68b8c81b4e8a199fd75437b74,
         type: 3}
@@ -3993,6 +3993,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521194984577862756, guid: 004e5893b05cabd43a475ce669185ff8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4615091621943817008, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
