@@ -88,6 +88,7 @@ Transform:
   - {fileID: 924593149773316207}
   - {fileID: 1420513982387167134}
   - {fileID: 7310344471441592837}
+  - {fileID: 8619745735301160161}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &8695836902311375215
@@ -124,6 +125,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDecoration: 0
+  isPlaying: 0
+--- !u!1 &7947982096700226733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8619745735301160161}
+  - component: {fileID: 2857822719255009427}
+  m_Layer: 0
+  m_Name: Left (1)
+  m_TagString: left
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8619745735301160161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7947982096700226733}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.045, y: 1, z: -0.03}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6374327526184933355}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2857822719255009427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7947982096700226733}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.87800556, y: 0.7137431, z: 1.9372236}
+  m_Center: {x: 0.012138277, y: -0.14312845, z: 0.53020114}
 --- !u!1001 &1458062978004088949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,6 +257,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mesa L 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3419609435163704909, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -7578199775284158912, guid: e55690d9e8c21024e8f0a7d849c2912e,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
