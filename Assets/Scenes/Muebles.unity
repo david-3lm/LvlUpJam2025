@@ -340,6 +340,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 670538554283591628, guid: fbbf4755f08b2cb42a930b74f5caf206,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77904af0d163c6b46b67dc3526f4b3c3, type: 2}
     - target: {fileID: 1089515215177255702, guid: fbbf4755f08b2cb42a930b74f5caf206,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -389,6 +394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270626104798970015, guid: fbbf4755f08b2cb42a930b74f5caf206,
+        type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2934140967327692022, guid: fbbf4755f08b2cb42a930b74f5caf206,
         type: 3}
@@ -1411,7 +1421,7 @@ GameObject:
   - component: {fileID: 797235286}
   - component: {fileID: 797235285}
   - component: {fileID: 797235289}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: left
   m_TagString: left
   m_Icon: {fileID: 0}

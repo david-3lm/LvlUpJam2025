@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -17,6 +19,8 @@ public class Furniture : MonoBehaviour
     private Transform furnitureParent;
     
     private LevelManager levelManager;
+    
+    List<OverlapChecker> checkers;
     private void Start()
     {
         cam = Camera.main;
@@ -24,6 +28,7 @@ public class Furniture : MonoBehaviour
         furnitureParent = transform.parent;
         startPosition = transform.localPosition;
         levelManager = FindObjectOfType<LevelManager>();
+        checkers = GetComponentsInChildren<OverlapChecker>().ToList();
     }
 
     private void Update()
@@ -45,7 +50,7 @@ public class Furniture : MonoBehaviour
     {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         float enter = 0f;
-
+        CheckOverlap();
         if (dragPlane.Raycast(ray, out enter))
         {
             Vector3 hitPoint = ray.GetPoint(enter);
@@ -72,18 +77,21 @@ public class Furniture : MonoBehaviour
     
     private bool CheckOverlap()
     {
-        Vector3 center = transform.position + transform.rotation * GetComponent<BoxCollider>().center;
-        Vector3 halfExtents = GetComponent<BoxCollider>().size * 0.5f;
-        Collider[] overlaps = Physics.OverlapBox(center, halfExtents, transform.rotation);
-        foreach (var col in overlaps)
+
+        foreach (var ch in checkers)
         {
-            if (col.gameObject != gameObject && !col.gameObject.CompareTag("Floor"))
-            {
-                Debug.Log("Hay overlap con"+ col.gameObject.name);
+            if (ch.CheckOverlap())
                 return true;
-            }
         }
         return false;
+    }
+
+    private void EmptyChecker()
+    {
+        foreach (var ch in checkers)
+        {
+            ch.ChangeToEmpty();
+        }
     }
 
     private bool IsInsideMap()
@@ -105,6 +113,7 @@ public class Furniture : MonoBehaviour
             transform.SetParent(furnitureParent);
             transform.localPosition = startPosition;
         }
+        EmptyChecker();
         isSelected = false;
     }
     

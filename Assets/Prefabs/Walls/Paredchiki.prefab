@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4513209048091918261}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Paredchiki
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 9073568310258088885}
   - component: {fileID: 6014786757760708821}
   - component: {fileID: 7176172902778670575}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: left
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
