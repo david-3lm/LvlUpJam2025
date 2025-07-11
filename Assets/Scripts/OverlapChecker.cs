@@ -25,7 +25,7 @@ public class OverlapChecker : MonoBehaviour
     {
         Vector3 center = transform.position + transform.rotation * collider.center;
         Vector3 halfExtents = Vector3.Scale(collider.size * 0.5f, transform.lossyScale);
-        LayerMask mask = LayerMask.GetMask("Ignore Raycast", "Suciedad");
+        LayerMask mask = LayerMask.GetMask("Ignore Raycast", "Suciedad", "Player");
         Collider[] overlaps = Physics.OverlapBox(center, halfExtents, transform.rotation, mask);
         foreach (var col in overlaps)
         {
