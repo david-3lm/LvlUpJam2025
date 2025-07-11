@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDecoration: 0
+  isPlaying: 0
 --- !u!1001 &2304218749786414489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -256,6 +257,16 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 44e383679e2998144b3c8b7f12c6196c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c106ab0dbb608940833febfd1676dc1, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 44e383679e2998144b3c8b7f12c6196c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11fa883911d24c04ea7b900225678099, type: 2}
     - target: {fileID: 919132149155446097, guid: 44e383679e2998144b3c8b7f12c6196c,
         type: 3}
       propertyPath: m_Name
