@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
@@ -55,10 +56,8 @@ public class LevelManager : MonoBehaviour
         RemoveLevel();
         id = Mathf.Clamp(id, 0, levels.Count);
         currentLevel = levels[id];
-        RestartPositionRotation();
         PlayerPrefs.SetInt(PREF_LAST_LEVEL, id);
         PlayerPrefs.Save();
-        RestartPositionRotation();
         Debug.Log($"Loading level {id}: {currentLevel.name}");
         
         for (int i = 0; i < currentLevel.rows; i++)
@@ -83,10 +82,10 @@ public class LevelManager : MonoBehaviour
             Instantiate(wall, new Vector3(i, 0, currentLevel.cols), Quaternion.identity, levelRoot);
         }
 
-        RestartPositionRotation();
 
         LoadFurniture(currentLevel.poolFurniture, false, interactuableFurnitureRoot, false);
         LoadFurniture(currentLevel.modelNPoss, true, furnitureRoot, true);
+        RestartPositionRotation();
     }
 
     private void LoadFurniture(List<ModelNPos> list, bool isDecoration, Transform root, bool flagLocalPosition)
@@ -130,9 +129,7 @@ public class LevelManager : MonoBehaviour
         if (nextIndex < levels.Count)
         {
             playerScript.Stop();
-            RestartPositionRotation();
             LoadLevel(nextIndex);
-            RestartPositionRotation();
         }
         else
         {
@@ -157,7 +154,7 @@ public class LevelManager : MonoBehaviour
     {
         LoadLevel(currentLevel.id);
     }
-
+    
     private void RestartPositionRotation()
     {
         player.transform.position = new Vector3(currentLevel.startPos.x, 1.5f, currentLevel.startPos.y);

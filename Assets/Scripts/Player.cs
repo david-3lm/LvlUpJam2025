@@ -34,9 +34,11 @@ public class Player : MonoBehaviour
         //else if (Input.GetKeyDown(KeyCode.A))
         //    Rotate(-90);
         
-        if (speed < 1f)
-            return;
+        // if (speed < 1f)
+        //     return;
+        float gravity = rb.velocity.y;
         rb.velocity = transform.forward * speed;
+        rb.velocity = new Vector3(rb.velocity.x, gravity, rb.velocity.z);
     }
 
     public void SwitchMovement()
