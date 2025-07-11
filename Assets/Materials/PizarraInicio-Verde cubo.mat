@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6242069602065716092
+--- !u!114 &-8439882132265239414
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,9 +20,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: coche
+  m_Name: PizarraInicio-Verde cubo
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 2100000, guid: 9b64fb6b560c8c4438623255a7a1b28e, type: 2}
+  m_Parent: {fileID: 2100000, guid: 6ea201dce373cc34693e4fea376c9581, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -38,13 +38,8 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
-    m_Floats:
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Parallax: 0.02
+    m_Floats: []
     m_Colors:
-    - _BaseColor: {r: 0.90672684, g: 0.873422, b: 0.4094754, a: 1}
-    - _Color: {r: 0.90672684, g: 0.873422, b: 0.40947536, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _BaseColor: {r: 0.324593, g: 0.8002588, b: 0.25783455, a: 1}
+    - _Color: {r: 0.32459298, g: 0.8002588, b: 0.25783452, a: 1}
   m_BuildTextureStacks: []

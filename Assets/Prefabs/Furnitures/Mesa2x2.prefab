@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b11c82d259cee64a944b998136bfa9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDecoration: 0
 --- !u!1001 &1108101561238812959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -145,11 +146,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6f1551145db4a834a8b0f5565078f2b7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d045dff2c3359354eaec4b41b69ef2c7, type: 2}
     - target: {fileID: 919132149155446097, guid: 6f1551145db4a834a8b0f5565078f2b7,
         type: 3}
       propertyPath: m_Name
       value: Mesa2x2
       objectReference: {fileID: 0}
+    - target: {fileID: 1442450553484104045, guid: 6f1551145db4a834a8b0f5565078f2b7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 628a12e4d1db7c34085fea6fc1cfd9e4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
