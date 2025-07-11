@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private Animator animator;
     
     [SerializeField]private Rigidbody rb;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -83,7 +84,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (isWaiting)
+        if (isWaiting || speed == 0f)
             return;
 
         if (collision.gameObject.CompareTag("right"))

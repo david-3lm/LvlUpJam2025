@@ -123,11 +123,12 @@ public class Furniture : MonoBehaviour
 
     void TogglePlay()
     {
-        if (isPlaying && playerScript.speed == 0)
-        {
-            isPlaying = false;
-        }
-        else if (!isPlaying && playerScript.speed != 0)
+        // if (isPlaying && playerScript.speed == 0)
+        // {
+        //     isPlaying = false;
+        // }
+        // else 
+        if (!isPlaying && playerScript.speed != 0 && IsInsideMap())
         {
             isPlaying = true;
         }
