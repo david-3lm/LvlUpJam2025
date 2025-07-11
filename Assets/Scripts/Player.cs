@@ -7,11 +7,14 @@ public class Player : MonoBehaviour
 {
     public float speed { get; private set; }
     private bool isWaiting = false;
+    
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         speed = 0f;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -82,12 +85,16 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.CompareTag("right"))
         {
+            if (!animator.GetBool("Crashed"))
+                animator.SetBool("Crashed", true);
             Debug.Log("choque con " + collision.gameObject.tag);
             Rotate(90);
             StartCoroutine(WaitBeforeNextCollision());
         }
         else if (collision.gameObject.CompareTag("left"))
         {
+            if (!animator.GetBool("Crashed"))
+                animator.SetBool("Crashed", true);
             Debug.Log("choque con " + collision.gameObject.tag);
             Rotate(-90);
             StartCoroutine(WaitBeforeNextCollision());
@@ -99,5 +106,6 @@ public class Player : MonoBehaviour
         isWaiting = true;
         yield return new WaitForSeconds(0.05f);
         isWaiting = false;
+        animator.SetBool("Crashed", false);
     }
 }
