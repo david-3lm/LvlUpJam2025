@@ -6,6 +6,7 @@ public class PlayToggleController : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private Toggle toggle;
     [SerializeField] private Image targetImage;
+    [SerializeField] private Image backgroundColorImage;
 
     [Header("Play Icons")]
     [SerializeField] private Sprite playSprite;
@@ -30,7 +31,7 @@ public class PlayToggleController : MonoBehaviour
         if (targetImage != null)
         {
             targetImage.sprite = isOn ? pauseSprite : playSprite;
-            targetImage.color = isOn ? pauseColor : playColor;
+            backgroundColorImage.color = isOn ? pauseColor : playColor;
         }
     }
 
