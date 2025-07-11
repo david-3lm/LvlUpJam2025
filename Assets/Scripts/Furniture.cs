@@ -14,7 +14,9 @@ public class Furniture : MonoBehaviour
 
     private Vector3 startPosition;
     private Transform player;
+    private Player playerScript;
     public bool isDecoration = false;
+    public bool isPlaying = false;
 
     private Transform furnitureParent;
     
@@ -25,6 +27,7 @@ public class Furniture : MonoBehaviour
     {
         cam = Camera.main;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerScript = player.gameObject.GetComponent<Player>();
         furnitureParent = transform.parent;
         startPosition = transform.localPosition;
         levelManager = FindObjectOfType<LevelManager>();
@@ -33,7 +36,8 @@ public class Furniture : MonoBehaviour
 
     private void Update()
     {
-        if (isSelected)
+        TogglePlay();
+        if (isSelected && !isPlaying)
         {
             MoveWithMouse();
             if (Input.GetKeyDown(KeyCode.R))
@@ -61,7 +65,7 @@ public class Furniture : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (isDecoration)
+        if (isDecoration || isPlaying)
             return;
         transform.SetParent(null);
         isSelected = true;
@@ -116,18 +120,17 @@ public class Furniture : MonoBehaviour
         EmptyChecker();
         isSelected = false;
     }
-    
-    private void OnDrawGizmos()
+
+    void TogglePlay()
     {
-        if (!isSelected) return;
-
-        BoxCollider box = GetComponent<BoxCollider>();
-        Vector3 center = transform.position + transform.rotation * GetComponent<BoxCollider>().center;
-        Vector3 halfExtents = Vector3.Scale(box.size * 0.5f, transform.lossyScale);
-
-        Gizmos.color = Color.red;
-        Gizmos.matrix = Matrix4x4.TRS(center, transform.rotation, Vector3.one);
-        Gizmos.DrawWireSphere(center, 1f);
-        Gizmos.DrawWireCube(Vector3.zero, halfExtents * 2f); // halfExtents * 2 = full size
+        if (isPlaying && playerScript.speed == 0)
+        {
+            isPlaying = false;
+        }
+        else if (!isPlaying && playerScript.speed != 0)
+        {
+            isPlaying = true;
+        }
     }
+    
 }
