@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class MenuButtonController : MonoBehaviour
@@ -31,12 +27,8 @@ public class MenuButtonController : MonoBehaviour
     public void ToggleMenu()
     {
         isOpen = !isOpen;
-        Debug.Log("Toggling menu state: " + isOpen);
         if (menuContent != null) menuContent.SetActive(isOpen);
-        if (backdropMenu != null)
-        { 
-            backdropMenu.SetActive(isOpen);
-        }
+        if (backdropMenu != null) backdropMenu.SetActive(isOpen);
         if (player != null) player.enabled = !isOpen;
         Debug.Log(isOpen ? "Menu opened" : "Menu closed");
     }
