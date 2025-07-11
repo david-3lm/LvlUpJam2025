@@ -79,7 +79,10 @@ public class Player : MonoBehaviour
     void Rotate(float angle)
     {
         transform.position = new Vector3(Mathf.Round(transform.position.x), transform.position.y, Mathf.Round(transform.position.z));
-        transform.RotateAround(transform.position, Vector3.up, transform.rotation.y + angle);
+        var rot = transform.rotation.eulerAngles.y;
+
+        transform.rotation = Quaternion.Euler(0, Mathf.Round(rot + angle), 0);
+        // transform.RotateAround(transform.position, Vector3.up, transform.rotation.y + angle);
     }
 
     private void OnCollisionEnter(Collision collision)
