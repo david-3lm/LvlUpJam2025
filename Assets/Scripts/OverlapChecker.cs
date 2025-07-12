@@ -32,7 +32,6 @@ public class OverlapChecker : MonoBehaviour
             if (col.gameObject != gameObject && !col.gameObject.CompareTag("Floor"))
             {
                 ChangeToBad();
-                Debug.Log("Hay overlap con"+ col.gameObject.name);
                 return true;
             }
         }

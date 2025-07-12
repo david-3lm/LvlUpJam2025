@@ -30,8 +30,6 @@ public class LevelManager : MonoBehaviour
 
     [Header("Scripts")]
     [SerializeField] private Player playerScript;
-
-    private List<GameObject> furnitureBox;
     
     [SerializeField] int DebugLvl = 0;
 
@@ -51,7 +49,6 @@ public class LevelManager : MonoBehaviour
             Debug.LogError("Level root is not assigned in LevelManager!");
         if (furnitureRoot == null)
             Debug.LogError("Furnature root is not assigned in LevelManager!");
-        furnitureBox = GameObject.FindGameObjectsWithTag("FurnitureBox").ToList();
         CountCleaned = 0;
         playerScript = player.GetComponent<Player>();
     }
