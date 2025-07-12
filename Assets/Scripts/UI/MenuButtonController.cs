@@ -28,6 +28,7 @@ public class MenuButtonController : MonoBehaviour
     public void ToggleMenu()
     {
         isOpen = !isOpen;
+        if (menuLevels != null) menuLevels.SetActive(false);
         if (menuContent != null) menuContent.SetActive(isOpen);
         if (backdropMenu != null) backdropMenu.SetActive(isOpen);
         if (player != null) player.enabled = !isOpen;
@@ -39,7 +40,7 @@ public class MenuButtonController : MonoBehaviour
         if (!isOpen) return;
 
         isOpen = false;
-
+        
         if (menuContent != null) menuContent.SetActive(false);
         if (backdropMenu != null) backdropMenu.SetActive(false);
         if (player  != null) player.enabled = true;
@@ -57,7 +58,6 @@ public class MenuButtonController : MonoBehaviour
         if (menuLevels != null)
             menuLevels.SetActive(false);
     }
-    
 
     private void OnDestroy()
     {
