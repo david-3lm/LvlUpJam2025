@@ -62,7 +62,7 @@ public class LevelManager : MonoBehaviour
     
     public void StartGame()
     {
-        int last = PlayerPrefs.GetInt(PREF_LAST_LEVEL, 0);
+        int last = PlayerPrefs.GetInt(PREF_LAST_LEVEL, 1);
         
         #if UNITY_EDITOR
             last = DebugLvl;
