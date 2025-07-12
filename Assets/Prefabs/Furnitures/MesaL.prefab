@@ -351,17 +351,87 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6163602479422152444, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c106ab0dbb608940833febfd1676dc1, type: 2}
+    - target: {fileID: -5796313763490398252, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ea201dce373cc34693e4fea376c9581, type: 2}
+    - target: {fileID: -4842353213681913053, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d597364712ae4b94c8546bfc4d21d166, type: 2}
+    - target: {fileID: -4534358971279077723, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ea201dce373cc34693e4fea376c9581, type: 2}
+    - target: {fileID: -1690587881700678017, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 50f65d5d92b752e4fb0668dec9872672, type: 2}
+    - target: {fileID: -992349364466152068, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11fa883911d24c04ea7b900225678099, type: 2}
+    - target: {fileID: 264817266790556094, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc90c124f0610cf4fb4e8fb1ef53ac62, type: 2}
     - target: {fileID: 919132149155446097, guid: 1235b37946c670043ade5882f07f16f1,
         type: 3}
       propertyPath: m_Name
       value: Mesa L 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2641032801839788980, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c106ab0dbb608940833febfd1676dc1, type: 2}
     - target: {fileID: 3419609435163704909, guid: 1235b37946c670043ade5882f07f16f1,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -7578199775284158912, guid: e55690d9e8c21024e8f0a7d849c2912e,
         type: 3}
+    - target: {fileID: 3808143333193915641, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b64fb6b560c8c4438623255a7a1b28e, type: 2}
+    - target: {fileID: 4396446676246855856, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 607e9c5381e44e84b86d18a4ad99dd56, type: 2}
+    - target: {fileID: 4754035288430277922, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b8380b9130767a4396de4329b7aceb8, type: 2}
+    - target: {fileID: 4754035288430277922, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b8380b9130767a4396de4329b7aceb8, type: 2}
+    - target: {fileID: 4754035288430277922, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: c5d6fd8362750bc4a8591156f7a0b600, type: 2}
+    - target: {fileID: 8548952443184230358, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 50f65d5d92b752e4fb0668dec9872672, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

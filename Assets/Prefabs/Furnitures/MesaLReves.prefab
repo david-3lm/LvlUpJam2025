@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDecoration: 0
   isPlaying: 0
+<<<<<<< Updated upstream
 --- !u!1 &7947982096700226733
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +180,8 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.87800556, y: 0.7137431, z: 1.9372236}
   m_Center: {x: 0.012138277, y: -0.14312845, z: 0.53020114}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &1458062978004088949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,17 +255,90 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6163602479422152444, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c425cfbb7b51fe46be0a6102da1d3b6, type: 2}
+    - target: {fileID: -6163602479422152444, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 348f0cdce6401e7488f9395c68559266, type: 2}
+    - target: {fileID: -5796313763490398252, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ea201dce373cc34693e4fea376c9581, type: 2}
+    - target: {fileID: -4534358971279077723, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ea201dce373cc34693e4fea376c9581, type: 2}
+    - target: {fileID: 264817266790556094, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 628a12e4d1db7c34085fea6fc1cfd9e4, type: 2}
+    - target: {fileID: 264817266790556094, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 348f0cdce6401e7488f9395c68559266, type: 2}
     - target: {fileID: 919132149155446097, guid: 1235b37946c670043ade5882f07f16f1,
         type: 3}
       propertyPath: m_Name
       value: Mesa L 1
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 3419609435163704909, guid: 1235b37946c670043ade5882f07f16f1,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -7578199775284158912, guid: e55690d9e8c21024e8f0a7d849c2912e,
         type: 3}
+=======
+    - target: {fileID: 2641032801839788980, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 607e9c5381e44e84b86d18a4ad99dd56, type: 2}
+    - target: {fileID: 3808143333193915641, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 50f65d5d92b752e4fb0668dec9872672, type: 2}
+    - target: {fileID: 3808143333193915641, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 348f0cdce6401e7488f9395c68559266, type: 2}
+    - target: {fileID: 4754035288430277922, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bd5da2469eb4a7a4c813acf4c642342f, type: 2}
+    - target: {fileID: 4754035288430277922, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b8380b9130767a4396de4329b7aceb8, type: 2}
+    - target: {fileID: 4754035288430277922, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: d597364712ae4b94c8546bfc4d21d166, type: 2}
+    - target: {fileID: 7742307420366481876, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 50f65d5d92b752e4fb0668dec9872672, type: 2}
+    - target: {fileID: 8548952443184230358, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 50f65d5d92b752e4fb0668dec9872672, type: 2}
+>>>>>>> Stashed changes
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

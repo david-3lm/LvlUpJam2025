@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDecoration: 0
+  isPlaying: 0
 --- !u!1001 &557873315282530344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -251,11 +252,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2908324368888789229, guid: 56e955213a4e3d84193b5a08d7b1d941,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 82f7c106af5ea5846bab3df9a25afe8f, type: 2}
+    - target: {fileID: -2908324368888789229, guid: 56e955213a4e3d84193b5a08d7b1d941,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc75ac48c1af7b84b8b0f980c8b61610, type: 2}
     - target: {fileID: 919132149155446097, guid: 56e955213a4e3d84193b5a08d7b1d941,
         type: 3}
       propertyPath: m_Name
       value: CajonJugetes
       objectReference: {fileID: 0}
+    - target: {fileID: 3963605073081669307, guid: 56e955213a4e3d84193b5a08d7b1d941,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: bfec77a596ef267449a141ce7fbabe4d, type: 2}
+    - target: {fileID: 7519534301087431881, guid: 56e955213a4e3d84193b5a08d7b1d941,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4817e08dba21ccc478d0538073104b67, type: 2}
+    - target: {fileID: 7519534301087431881, guid: 56e955213a4e3d84193b5a08d7b1d941,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: bfec77a596ef267449a141ce7fbabe4d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -9,8 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: coche Variant
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 9083421890127983685, guid: b40c1fe0290f7f34ba9c372170e2b7d1,
-    type: 3}
+  m_Parent: {fileID: 2100000, guid: dc90c124f0610cf4fb4e8fb1ef53ac62, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
