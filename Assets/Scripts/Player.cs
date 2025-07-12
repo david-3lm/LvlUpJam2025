@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -12,6 +13,9 @@ public class Player : MonoBehaviour
     
     [SerializeField]private Rigidbody rb;
     
+    float counter;
+    public bool gameStarted = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +25,28 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private void Update()
+    {
+        if (gameStarted && rb.velocity.magnitude <= 1f)
+            counter += Time.deltaTime;
+        else
+            counter = 0f;
+        if (counter >= 2f)
+        {
+            counter = 0f;
+            gameStarted = false;
+            StartCoroutine(GameOver());
+        }
+    }
+
+    IEnumerator GameOver()
+    {
+        Stop();
+        rb.AddForce(0,10f,0,ForceMode.Impulse);
+        yield return new WaitForSeconds(3f);
+        Stop();
+        FindObjectOfType<LevelManager>().ReloadLevel();
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -60,6 +86,8 @@ public class Player : MonoBehaviour
 
     public void Run()
     {
+        if (!gameStarted)
+            gameStarted = true;
         IncreaseSpeed();
         //transform.Translate(Vector3.forward * (speed * Time.deltaTime));
     }

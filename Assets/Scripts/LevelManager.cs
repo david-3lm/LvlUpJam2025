@@ -54,7 +54,7 @@ public class LevelManager : MonoBehaviour
         CountCleaned = 0;
         playerScript = player.GetComponent<Player>();
     }
-
+    
     public void StartGame()
     {
         int last = PlayerPrefs.GetInt(PREF_LAST_LEVEL, 0);
@@ -188,6 +188,7 @@ public class LevelManager : MonoBehaviour
 
     public void ReloadLevel()
     {
+        playerScript.gameStarted = false;
         CountCleaned = 0;
         LoadLevel(currentLevel.id);
     }
