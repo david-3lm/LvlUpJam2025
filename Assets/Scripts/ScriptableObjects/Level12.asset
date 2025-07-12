@@ -39,27 +39,35 @@ MonoBehaviour:
   - {fileID: 6229941565162680314, guid: 70f175dba7547164e921f3102baf06df, type: 3}
   poolFurniture:
   - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    img: {fileID: 21300000, guid: a69bab60a487672449c93f12370f6ee6, type: 3}
     position: {x: -1.5, y: -4, z: -0.5}
     rotation: {x: -20.7, y: 49, z: -22.2}
   - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    img: {fileID: 21300000, guid: a69bab60a487672449c93f12370f6ee6, type: 3}
     position: {x: 2.5, y: 4, z: 0.5}
     rotation: {x: -20.7, y: 49, z: -22.2}
   - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    img: {fileID: 21300000, guid: a69bab60a487672449c93f12370f6ee6, type: 3}
     position: {x: 0.5, y: 2, z: 0}
     rotation: {x: -20.7, y: 49, z: -22.2}
   - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    img: {fileID: 21300000, guid: a69bab60a487672449c93f12370f6ee6, type: 3}
     position: {x: -0.5, y: -2, z: 0}
     rotation: {x: -20.7, y: 49, z: -22.2}
   modelNPoss:
   - model: {fileID: 1120021983230733291, guid: 05b58b887ea9b7742bb39ce8d8527884, type: 3}
+    img: {fileID: 0}
     position: {x: 13, y: 0, z: 2}
     rotation: {x: 0, y: 180, z: 0}
   - model: {fileID: 1120021983230733291, guid: 05b58b887ea9b7742bb39ce8d8527884, type: 3}
+    img: {fileID: 0}
     position: {x: 5, y: 0, z: 2}
     rotation: {x: 0, y: 180, z: 0}
   - model: {fileID: 2963708156169640423, guid: ca3288e355c2359409e1054cfa6a4cc8, type: 3}
+    img: {fileID: 0}
     position: {x: 2, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0}
   - model: {fileID: 4179555347632450434, guid: 632000ffa19bc244db692e7872632d4c, type: 3}
+    img: {fileID: 0}
     position: {x: 9, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0}

@@ -139,12 +139,12 @@ TextureImporter:
       name: icon_furniture_0
       rect:
         serializedVersion: 2
-        x: 426
-        y: 1495
-        width: 134
-        height: 336
+        x: 102
+        y: 1339
+        width: 774
+        height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,12 +160,12 @@ TextureImporter:
       name: icon_furniture_1
       rect:
         serializedVersion: 2
-        x: 993
-        y: 1533
-        width: 182
-        height: 107
+        x: 691
+        y: 1250
+        width: 774
+        height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,11 +182,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1848
-        y: 1351
+        y: 1339
         width: 774
-        height: 584
+        height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,7 +207,7 @@ TextureImporter:
         width: 774
         height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: icon_furniture_4
       rect:
         serializedVersion: 2
-        x: 970
-        y: 903
-        width: 227
-        height: 193
+        x: 702
+        y: 672
+        width: 774
+        height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,12 +244,12 @@ TextureImporter:
       name: icon_furniture_5
       rect:
         serializedVersion: 2
-        x: 1886
-        y: 706
-        width: 541
-        height: 504
+        x: 1762
+        y: 698
+        width: 774
+        height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,12 +265,12 @@ TextureImporter:
       name: icon_furniture_6
       rect:
         serializedVersion: 2
-        x: 918
-        y: 147
-        width: 324
-        height: 308
+        x: 692
+        y: 0
+        width: 774
+        height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,12 +286,12 @@ TextureImporter:
       name: icon_furniture_7
       rect:
         serializedVersion: 2
-        x: 1855
-        y: 78
-        width: 430
-        height: 365
+        x: 1696
+        y: 7
+        width: 774
+        height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,12 +307,12 @@ TextureImporter:
       name: icon_furniture_8
       rect:
         serializedVersion: 2
-        x: 2898
-        y: 115
-        width: 624
-        height: 657
+        x: 2861
+        y: 113
+        width: 774
+        height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

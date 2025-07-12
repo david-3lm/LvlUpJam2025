@@ -1,7 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
+
+public class FurnitureData
+{
+    public int count;
+    public Sprite img;
+
+    public FurnitureData(int count, Sprite img)
+    {
+        this.count = count;
+        this.img = img;
+    }
+}
 
 public class FurnitureButtonHandler : MonoBehaviour
 {
@@ -12,7 +25,7 @@ public class FurnitureButtonHandler : MonoBehaviour
     
     [SerializeField]private GameObject buttonObject;
     
-    Dictionary<GameObject, int> furnitureDictionary = new Dictionary<GameObject, int>();
+    Dictionary<GameObject, FurnitureData> furnitureDictionary = new Dictionary<GameObject, FurnitureData>();
     
     // Start is called before the first frame update
     void Start()
@@ -51,10 +64,10 @@ public class FurnitureButtonHandler : MonoBehaviour
         foreach (var fur in furnitures)
         {
             if (furnitureDictionary.ContainsKey(fur.model))
-                furnitureDictionary[fur.model]++;
+                furnitureDictionary[fur.model].count++;
             else
             {
-                furnitureDictionary.Add(fur.model, 1);
+                furnitureDictionary.Add(fur.model, new FurnitureData(1, fur.img));
             }
         }
     }
@@ -63,13 +76,15 @@ public class FurnitureButtonHandler : MonoBehaviour
     {
         int  i = furnitureDictionary.Count;
         int k = 0;
+        int j = -1;
         Debug.Log("Debo hacer" + i +" botones ");
         foreach (var fur in furnitureDictionary)
         {
             var go = Instantiate(buttonObject, furnitureRoot);
-            go.GetComponent<RectTransform>().localPosition = new Vector3(0, k * -50, 0);
-            go.GetComponent<FurnitureButton>().SetFurnitureAndCount(fur.Key, fur.Value);
+            go.GetComponent<RectTransform>().localPosition = new Vector3(50 * j, k * -100, 0);
+            go.GetComponent<FurnitureButton>().SetFurnitureAndCount(fur.Key, fur.Value.count, fur.Value.img);
             k++;
+            j = -j;
         }
     }
 

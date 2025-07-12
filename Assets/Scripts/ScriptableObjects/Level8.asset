@@ -34,27 +34,35 @@ MonoBehaviour:
   - {fileID: 6229941565162680314, guid: 70f175dba7547164e921f3102baf06df, type: 3}
   poolFurniture:
   - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    img: {fileID: 21300000, guid: a69bab60a487672449c93f12370f6ee6, type: 3}
     position: {x: -1.5, y: -4, z: -0.5}
     rotation: {x: -20.7, y: 49, z: -22.2}
   - model: {fileID: 8263716622718047072, guid: a905db6970a14c446a0964cc96bd8dea, type: 3}
+    img: {fileID: -1895634535, guid: 7ac9942a0e1126644844508954d88d5b, type: 3}
     position: {x: 0, y: 0, z: 0}
     rotation: {x: -20.7, y: 49, z: -22.2}
   - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    img: {fileID: 21300000, guid: a69bab60a487672449c93f12370f6ee6, type: 3}
     position: {x: 2.5, y: 4, z: 0.5}
     rotation: {x: -20.7, y: 49, z: -22.2}
   modelNPoss:
   - model: {fileID: 6229941565162680314, guid: fbbf4755f08b2cb42a930b74f5caf206, type: 3}
+    img: {fileID: 0}
     position: {x: 3, y: 0, z: 4}
     rotation: {x: 0, y: 90, z: 0}
   - model: {fileID: 6961783983698529328, guid: 64818841d6aec804ebd35f9ad06d5494, type: 3}
+    img: {fileID: 0}
     position: {x: 1, y: 0, z: 4}
     rotation: {x: 0, y: -90, z: 0}
   - model: {fileID: 4179555347632450434, guid: 632000ffa19bc244db692e7872632d4c, type: 3}
+    img: {fileID: 0}
     position: {x: 7, y: 0, z: 5}
     rotation: {x: 0, y: 0, z: 0}
   - model: {fileID: 6229941565162680314, guid: fbbf4755f08b2cb42a930b74f5caf206, type: 3}
+    img: {fileID: 0}
     position: {x: 6, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0}
   - model: {fileID: 4790957063919975134, guid: 24a32ec6c4d47854db1e2b67b5776662, type: 3}
+    img: {fileID: 0}
     position: {x: 1, y: 0, z: 2}
     rotation: {x: 0, y: 0, z: 0}
