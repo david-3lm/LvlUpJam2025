@@ -141,6 +141,7 @@ public class LevelManager : MonoBehaviour
         if (stainTf != null)
         {
             //Debug.Log($"Stain found at ({x}, {y})");
+            playerScript.Collect();
             Destroy(stainTf.gameObject);
             CountCleaned++;
         }

@@ -145,6 +145,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Collect()
+    {
+        animator.SetTrigger("Collect");
+    }
+
     private IEnumerator WaitBeforeNextCollision()
     {
         isWaiting = true;
