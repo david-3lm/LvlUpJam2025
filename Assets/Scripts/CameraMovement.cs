@@ -12,7 +12,6 @@ public class CameraMovement : MonoBehaviour
     public float smoothSpeed = 0.125f;
     Collider objCollider;
     bool firstFrame = true;
-    bool carFound = false;
 
     [SerializeField] private bool followPlayer = false;
 
@@ -58,16 +57,7 @@ public class CameraMovement : MonoBehaviour
 
     void MoveCamera(float speedX, float speedY)
     {
-        Vector3 pos = transform.position;
         transform.position += new Vector3(speedX, 0f, speedY);
-        planes = GeometryUtility.CalculateFrustumPlanes(cam);
-        if (!GeometryUtility.TestPlanesAABB(planes, objCollider.bounds))
-        {
-            if (!carFound)
-                return;
-            transform.position = pos;
-        }
-        else
-            carFound = true;
+
     }
 }

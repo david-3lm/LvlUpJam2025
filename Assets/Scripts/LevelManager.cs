@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class LevelManager : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject wall;
     [SerializeField] private GameObject smallWall;
 
+    private Vector3 cameraTransform = new Vector3(14,10,-2);
+    
     [Header("Scripts")]
     [SerializeField] private Player playerScript;
     
@@ -52,6 +55,7 @@ public class LevelManager : MonoBehaviour
     
     private void Start()
     {
+        cameraTransform = Camera.main.transform.position;
         if (levelRoot == null)
             Debug.LogError("Level root is not assigned in LevelManager!");
         if (furnitureRoot == null)
@@ -74,6 +78,8 @@ public class LevelManager : MonoBehaviour
     public void LoadLevel(int id)
     {
         RemoveLevel();
+        playerScript.Stop();
+        Camera.main.transform.position = cameraTransform;
         if (!levels.ContainsKey(id))
         {
             Debug.LogError($"Level with ID {id} not found!");
