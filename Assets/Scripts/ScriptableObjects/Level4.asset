@@ -25,8 +25,11 @@ MonoBehaviour:
   direction: 180
   tilePrefab: {fileID: 3670916398354334268, guid: d84e696c829392b47b56a16c64161593,
     type: 3}
-  spotPrefab: {fileID: 6229941565162680314, guid: 39bb17d24609dcb4f84cd4946445a548,
-    type: 3}
+  spotPrefab:
+  - {fileID: 6229941565162680314, guid: 39bb17d24609dcb4f84cd4946445a548, type: 3}
+  - {fileID: 6229941565162680314, guid: fbd6c734da465d54eb3aa452b29cef10, type: 3}
+  - {fileID: 6229941565162680314, guid: 83191158c3aea0449b6a43278f54fc7c, type: 3}
+  - {fileID: 6229941565162680314, guid: 70f175dba7547164e921f3102baf06df, type: 3}
   poolFurniture:
   - model: {fileID: 6229941565162680314, guid: fbbf4755f08b2cb42a930b74f5caf206, type: 3}
     position: {x: -1.5, y: -4, z: 0.5}

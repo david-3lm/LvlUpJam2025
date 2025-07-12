@@ -31,6 +31,8 @@ public class LevelManager : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] private Player playerScript;
     
+    [SerializeField] Animator UIAnimator;
+    
     [SerializeField] int DebugLvl = 0;
 
     private const string PREF_LAST_LEVEL = "LastLevelIndex";
@@ -90,8 +92,9 @@ public class LevelManager : MonoBehaviour
                     Instantiate(wall, new Vector3(-1, 0, j), Quaternion.identity, levelRoot);
                     Instantiate(currentLevel.tilePrefab, new Vector3(i, 0, j), Quaternion.identity, levelRoot);
                     Instantiate(smallWall, new Vector3(currentLevel.rows, 0, j), Quaternion.identity, levelRoot);
+                    var idx = Random.Range(0, currentLevel.spotPrefab.Count);
                     if (currentLevel.spots.Contains(new Vector2(i, j)))
-                        Instantiate(currentLevel.spotPrefab, new Vector3(i, 1, j), Quaternion.identity, levelRoot).name = $"Stain_{i}_{j}";
+                        Instantiate(currentLevel.spotPrefab[idx], new Vector3(i, 1, j), Quaternion.identity, levelRoot).name = $"Stain_{i}_{j}";
                 }
             }
             Instantiate(smallWall, new Vector3(i, 0, -1), Quaternion.identity, levelRoot);
@@ -100,7 +103,7 @@ public class LevelManager : MonoBehaviour
         }
 
 
-        LoadFurniture(currentLevel.poolFurniture, false, interactuableFurnitureRoot, false);
+        //LoadFurniture(currentLevel.poolFurniture, false, interactuableFurnitureRoot, false);
         LoadFurniture(currentLevel.modelNPoss, true, furnitureRoot, true);
         RestartPositionRotation();
     }
@@ -139,10 +142,21 @@ public class LevelManager : MonoBehaviour
         if (CountCleaned == currentLevel.spots.Count)
         {
             CountCleaned = 0;
-            NextLevel();
+            StartCoroutine(EndLevelCoroutine());
         }
     }
 
+    IEnumerator EndLevelCoroutine()
+    {
+        UIAnimator.SetBool("Win",true);
+        playerScript.Stop();
+        yield return new WaitForSeconds(1f);
+        NextLevel();
+        yield return new WaitForSeconds(1f);
+        UIAnimator.SetBool("Win",false);
+    }
+    
+    
     public void NextLevel()
     {
         //int nextIndex = PlayerPrefs.GetInt(PREF_LAST_LEVEL, 0) + 1;

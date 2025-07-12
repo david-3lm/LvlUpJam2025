@@ -30,7 +30,7 @@ public class Level : ScriptableObject
     public Direction direction;
 
     public GameObject tilePrefab;
-    public GameObject spotPrefab;
+    public List<GameObject> spotPrefab;
 
     [Header("User Interactuable Furnatures")]
 
