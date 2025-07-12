@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28cea43f75dbad648b7dd77a953c3d70, type: 3}
+  m_Name: Level14
+  m_EditorClassIdentifier: 
+  id: 14
+  cols: 14
+  rows: 8
+  spots:
+  - {x: 5, y: 1}
+  - {x: 1, y: 3}
+  - {x: 2, y: 6}
+  - {x: 1, y: 8}
+  - {x: 3, y: 11}
+  - {x: 7, y: 10}
+  empty:
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: 2, y: 0}
+  - {x: 3, y: 0}
+  - {x: 4, y: 0}
+  - {x: 5, y: 0}
+  - {x: 0, y: 1}
+  - {x: 1, y: 1}
+  - {x: 2, y: 1}
+  - {x: 0, y: 2}
+  - {x: 1, y: 2}
+  - {x: 2, y: 2}
+  - {x: 7, y: 0}
+  - {x: 7, y: 4}
+  - {x: 7, y: 5}
+  - {x: 7, y: 6}
+  - {x: 7, y: 7}
+  - {x: 7, y: 8}
+  - {x: 7, y: 9}
+  - {x: 7, y: 13}
+  - {x: 0, y: 10}
+  - {x: 1, y: 10}
+  - {x: 2, y: 10}
+  - {x: 0, y: 11}
+  - {x: 1, y: 11}
+  - {x: 2, y: 11}
+  - {x: 0, y: 12}
+  - {x: 1, y: 12}
+  - {x: 2, y: 12}
+  - {x: 0, y: 13}
+  - {x: 1, y: 13}
+  - {x: 2, y: 13}
+  - {x: 3, y: 13}
+  - {x: 4, y: 13}
+  - {x: 5, y: 13}
+  startPos: {x: 6, y: 0}
+  direction: 0
+  tilePrefab: {fileID: 3670916398354334268, guid: d84e696c829392b47b56a16c64161593,
+    type: 3}
+  spotPrefab: {fileID: 6229941565162680314, guid: 39bb17d24609dcb4f84cd4946445a548,
+    type: 3}
+  poolFurniture:
+  - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    position: {x: -1.5, y: -4, z: -0.5}
+    rotation: {x: -20.7, y: 49, z: -22.2}
+  - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    position: {x: 2.5, y: 4, z: 0.5}
+    rotation: {x: -20.7, y: 49, z: -22.2}
+  - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    position: {x: 0.5, y: 2, z: 0}
+    rotation: {x: -20.7, y: 49, z: -22.2}
+  modelNPoss:
+  - model: {fileID: 2656224385073744662, guid: acffaf6ae9446bb4cb977ad318734f80, type: 3}
+    position: {x: 1, y: 0, z: 4}
+    rotation: {x: 0, y: -90, z: 0}
+  - model: {fileID: 4179555347632450434, guid: 632000ffa19bc244db692e7872632d4c, type: 3}
+    position: {x: 0, y: 0, z: 9}
+    rotation: {x: 0, y: 90, z: 0}
+  - model: {fileID: 6074385879219865924, guid: b36ef052d25521640a1e59f0993e3834, type: 3}
+    position: {x: 4, y: 0, z: 11}
+    rotation: {x: 0, y: 90, z: 0}

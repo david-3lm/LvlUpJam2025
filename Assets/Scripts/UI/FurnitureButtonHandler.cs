@@ -36,7 +36,7 @@ public class FurnitureButtonHandler : MonoBehaviour
             Destroy(parent.GetChild(i).gameObject);
     }
 
-    void GetLevel()
+    public void GetLevel()
     {
         ClearTransform(furnitureRoot);
         furnitureDictionary.Clear();

@@ -70,6 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDecoration: 0
   isPlaying: 0
+  clicked: 1
 --- !u!1 &6330591291387662683
 GameObject:
   m_ObjectHideFlags: 0

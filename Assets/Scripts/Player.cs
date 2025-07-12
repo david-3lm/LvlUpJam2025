@@ -44,16 +44,16 @@ public class Player : MonoBehaviour
 
     public void SwitchMovement()
     { 
-        if (speed == 0f)
+        if (speed == 0f || speed == 4f)
             Run();
-        else
-            Stop();
+        else if (speed == 2f)
+            DoubleSpeed();
     }
 
     public void SwitchMovement(bool isMoving)
     {
-        if (isMoving)
-            Stop();
+        if (isMoving && speed != 4f)
+            DoubleSpeed();
         else
             Run();
     }
@@ -73,6 +73,11 @@ public class Player : MonoBehaviour
     public void Stop()
     {
         speed = 0f;
+    }
+
+    public void DoubleSpeed()
+    {
+        speed = 4f;
     }
 
     //ROTATE RIGHT 90 ROTATE LEFT -90
