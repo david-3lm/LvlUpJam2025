@@ -423,6 +423,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: -1271282102, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: 0653a843deeb1804bbf9452abd6eb177, type: 2}
   button: {fileID: 138824152}
 --- !u!1 &194891449
@@ -573,6 +576,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: -961975965, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: 6567b1996f3dc2f4684aa7346680fe76, type: 2}
   button: {fileID: 194891451}
 --- !u!1 &301139456
@@ -777,6 +783,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: -2050576259, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: 0166e1243a0c83243aa4ac4ffb11cd3a, type: 2}
   button: {fileID: 306864211}
 --- !u!1 &327553581
@@ -1145,6 +1154,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: 1920407625, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: 8d6cfb71a7bdda046972eadfe5de3bb2, type: 2}
   button: {fileID: 463005559}
 --- !u!1 &482710797
@@ -1295,6 +1307,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: -1122488224, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: 97bed04783f07994f854828fc5dfcd5c, type: 2}
   button: {fileID: 482710799}
 --- !u!1 &483412819
@@ -1870,6 +1885,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: -880700031, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: 99a93394dd3323a40be7ff32743c7e49, type: 2}
   button: {fileID: 639078161}
 --- !u!1 &742449447
@@ -2020,6 +2038,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: -267339872, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: a6d60dd289c7de84b91c0721dd90442e, type: 2}
   button: {fileID: 742449449}
 --- !u!1 &749197703
@@ -2657,6 +2678,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: -1121778645, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: 2aba43b5c797bee48a074f2201fea93e, type: 2}
   button: {fileID: 1060527293}
 --- !u!1 &1062155637
@@ -2882,6 +2906,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: -550370452, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: ee671ec2ba3ae9645a9e32f0fa91bc56, type: 2}
   button: {fileID: 1085333246}
 --- !u!1 &1143834779
@@ -3351,6 +3378,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: 1408354765, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: 8fcc556d5259981438be2da0225f2492, type: 2}
   button: {fileID: 1346819087}
 --- !u!1 &1439992123
@@ -3636,6 +3666,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: 1766894127, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: 52160aefbfa377842927eca603eeba35, type: 2}
   button: {fileID: 1474291190}
 --- !u!1 &1505107260
@@ -3921,6 +3954,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: -1418102539, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: ed34ad38ed6833a4f9cf921623a5f217, type: 2}
   button: {fileID: 1525157154}
 --- !u!1 &1573662221
@@ -4477,6 +4513,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: -1068598389, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: 1cf28804a422ab042b5b68b571ddb492, type: 2}
   button: {fileID: 1734449635}
 --- !u!1 &1785997420
@@ -5046,6 +5085,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: 2079157040, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: 87ceb828c53280a4cbcd45957c929d44, type: 2}
   button: {fileID: 1961890032}
 --- !u!1 &1978868820
@@ -5501,6 +5543,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManagerScript: {fileID: 920688021}
   menuButtonController: {fileID: 1725121475}
+  levelUnlockedSprite: {fileID: 1223879874, guid: 2ba29aa68c339384897f2f92794a4044,
+    type: 3}
+  levelLockedSprite: {fileID: 873880709, guid: 2ba29aa68c339384897f2f92794a4044, type: 3}
   levelData: {fileID: 11400000, guid: 5583a3aa7702c4e45acbd2bc99a862e1, type: 2}
   button: {fileID: 2016243159}
 --- !u!1 &2017739284
