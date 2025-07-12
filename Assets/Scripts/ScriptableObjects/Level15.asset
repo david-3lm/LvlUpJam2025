@@ -24,7 +24,7 @@ MonoBehaviour:
   - {x: 5, y: 5}
   - {x: 6, y: 6}
   empty: []
-  startPos: {x: 6, y: 0}
+  startPos: {x: 5, y: 0}
   direction: 0
   tilePrefab: {fileID: 3670916398354334268, guid: d84e696c829392b47b56a16c64161593,
     type: 3}

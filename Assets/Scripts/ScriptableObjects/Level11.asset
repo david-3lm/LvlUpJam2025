@@ -56,8 +56,8 @@ MonoBehaviour:
   - model: {fileID: 4790957063919975134, guid: 24a32ec6c4d47854db1e2b67b5776662, type: 3}
     position: {x: 0, y: 0, z: 3}
     rotation: {x: 0, y: 0, z: 0}
-  - model: {fileID: 1120021983230733291, guid: 05b58b887ea9b7742bb39ce8d8527884, type: 3}
-    position: {x: 6, y: 0, z: 0}
+  - model: {fileID: 2963708156169640423, guid: ca3288e355c2359409e1054cfa6a4cc8, type: 3}
+    position: {x: 5, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0}
   - model: {fileID: 6074385879219865924, guid: cd88d3186bf00e647a5e4ea1a06fa031, type: 3}
     position: {x: 8, y: 0, z: 9}

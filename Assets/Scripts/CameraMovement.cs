@@ -69,5 +69,6 @@ public class CameraMovement : MonoBehaviour
         }
         else
             carFound = true;
+        transform.position = pos;
     }
 }
