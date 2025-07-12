@@ -64,14 +64,14 @@ public class OverlapChecker : MonoBehaviour
         mesh.materials = materialArray;
     }
     
-    private void OnDrawGizmos()
-    {
-        Vector3 center = transform.position + transform.rotation * collider.center;
-        Vector3 halfExtents = Vector3.Scale(collider.size * 0.5f, transform.lossyScale);
-
-        Gizmos.color = Color.green;
-        Gizmos.matrix = Matrix4x4.TRS(center, transform.rotation, Vector3.one);
-        Gizmos.DrawWireSphere(center, 1f);
-        Gizmos.DrawWireCube(Vector3.zero, halfExtents * 2f); // halfExtents * 2 = full size
-    }
+    // private void OnDrawGizmos()
+    // {
+    //     Vector3 center = transform.position + transform.rotation * collider.center;
+    //     Vector3 halfExtents = Vector3.Scale(collider.size * 0.5f, transform.lossyScale);
+    //
+    //     Gizmos.color = Color.green;
+    //     Gizmos.matrix = Matrix4x4.TRS(center, transform.rotation, Vector3.one);
+    //     Gizmos.DrawWireSphere(center, 1f);
+    //     Gizmos.DrawWireCube(Vector3.zero, halfExtents * 2f);
+    // }
 }

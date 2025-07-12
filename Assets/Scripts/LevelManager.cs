@@ -17,7 +17,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Transform interactuableFurnitureRoot;
 
     [Header("Levels list")]
-    [SerializeField] private List<Level> levels = new List<Level>();
+    [SerializeField] private List<Level> levelList = new List<Level>();
+    [SerializeField] private Dictionary<int, Level> levels = new Dictionary<int, Level>();
     public Level currentLevel;
 
     private int CountCleaned;
@@ -31,9 +32,19 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Player playerScript;
 
     private List<GameObject> furnitureBox;
+    
+    [SerializeField] int DebugLvl = 0;
 
     private const string PREF_LAST_LEVEL = "LastLevelIndex";
 
+    private void Awake()
+    {
+        foreach (var l in levelList)
+        {
+            levels.TryAdd(l.id, l);
+        }
+    }
+    
     private void Start()
     {
         if (levelRoot == null)
@@ -48,13 +59,22 @@ public class LevelManager : MonoBehaviour
     public void StartGame()
     {
         int last = PlayerPrefs.GetInt(PREF_LAST_LEVEL, 0);
+        
+        #if UNITY_EDITOR
+            last = DebugLvl;
+        #endif
+        
         LoadLevel(last);
     }
 
     public void LoadLevel(int id)
     {
         RemoveLevel();
-        id = Mathf.Clamp(id, 0, levels.Count);
+        if (!levels.ContainsKey(id))
+        {
+            Debug.LogError($"Level with ID {id} not found!");
+            return;
+        }
         currentLevel = levels[id];
         PlayerPrefs.SetInt(PREF_LAST_LEVEL, id);
         PlayerPrefs.Save();
@@ -157,6 +177,7 @@ public class LevelManager : MonoBehaviour
 
     public void ReloadLevel()
     {
+        CountCleaned = 0;
         LoadLevel(currentLevel.id);
     }
     

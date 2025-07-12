@@ -126,7 +126,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDecoration: 0
   isPlaying: 0
-<<<<<<< Updated upstream
 --- !u!1 &7947982096700226733
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,8 +179,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.87800556, y: 0.7137431, z: 1.9372236}
   m_Center: {x: 0.012138277, y: -0.14312845, z: 0.53020114}
-=======
->>>>>>> Stashed changes
 --- !u!1001 &1458062978004088949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -290,14 +287,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mesa L 1
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-    - target: {fileID: 3419609435163704909, guid: 1235b37946c670043ade5882f07f16f1,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -7578199775284158912, guid: e55690d9e8c21024e8f0a7d849c2912e,
-        type: 3}
-=======
     - target: {fileID: 2641032801839788980, guid: 1235b37946c670043ade5882f07f16f1,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -338,7 +327,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 50f65d5d92b752e4fb0668dec9872672, type: 2}
->>>>>>> Stashed changes
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
