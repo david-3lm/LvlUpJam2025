@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8d418b023ae439948a88c70594bf5d25
+guid: 124e8c7b186f3cb418d26a92f53a9383
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,106 +136,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icon_play
+      name: pause 1_0
       rect:
         serializedVersion: 2
-        x: 606
-        y: 1191
-        width: 520
-        height: 520
+        x: 378
+        y: 1391
+        width: 1233
+        height: 432
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3375c67f23dd72845a66f6698fc3df71
-      internalID: -1911347956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icon_settings
-      rect:
-        serializedVersion: 2
-        x: 1355
-        y: 1163
-        width: 544
-        height: 520
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31afb79a6ae42104395c79e6f80cd9ba
-      internalID: 725721273
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icon_mute
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 291
-        width: 520
-        height: 520
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bae0c9c324bd3754cb9ee0747591d54e
-      internalID: 1161577958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icon_pause
-      rect:
-        serializedVersion: 2
-        x: 589
-        y: 310
-        width: 520
-        height: 520
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb576548df2c3df42b9d6c1cb9c3a274
-      internalID: 1199405587
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icon_unmuted
-      rect:
-        serializedVersion: 2
-        x: 1369
-        y: 356
-        width: 520
-        height: 520
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e7c24bb92da3e64ea0696f95188f0b1
-      internalID: 426291335
+      spriteID: fbd20a6a91a05b54598582a888bef0e3
+      internalID: -1713637309
       vertices: []
       indices: 
       edges: []
@@ -243,7 +159,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 938de78f5ebdb2e43920cf836b1e6ac1
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -251,11 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      icon_mute: 1161577958
-      icon_pause: 1199405587
-      icon_play: -1911347956
-      icon_settings: 725721273
-      icon_unmuted: 426291335
+      pause 1_0: -1713637309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
