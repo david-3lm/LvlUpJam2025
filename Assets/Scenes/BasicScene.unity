@@ -2717,6 +2717,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b62c094ee428bf46b70162aed4c738d, type: 3}
+--- !u!1 &986741193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2036345886633408180, guid: 0b62c094ee428bf46b70162aed4c738d,
+    type: 3}
+  m_PrefabInstance: {fileID: 986741192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &986914432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7057,6 +7063,11 @@ PrefabInstance:
       propertyPath: menuContent
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3845707824291819317, guid: 004e5893b05cabd43a475ce669185ff8,
+        type: 3}
+      propertyPath: adioManager
+      value: 
+      objectReference: {fileID: 986741193}
     - target: {fileID: 4239486148461813054, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: m_Sprite
@@ -7200,6 +7211,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7194204203212592543, guid: 004e5893b05cabd43a475ce669185ff8,
+        type: 3}
+      propertyPath: adioManager
+      value: 
+      objectReference: {fileID: 986741193}
     - target: {fileID: 7200725821770812814, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: isOpen

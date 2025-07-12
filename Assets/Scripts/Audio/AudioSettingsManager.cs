@@ -21,6 +21,8 @@ public class AudioVolumeManager : MonoBehaviour
     private const string PREF_VOL = "MasterVolumeSlider";
     private const string PREF_MUTED = "Muted";
 
+    public bool _isMute = true;
+
     // Start is called before the first frame update
     void Start()
     {
