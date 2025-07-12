@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDecoration: 0
   isPlaying: 0
+  clicked: 1
 --- !u!65 &5410779576569966381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -80,8 +81,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5336332873161689705, guid: e4f94e2def4f614438b9d8008a63b2b6,
         type: 3}
+      propertyPath: m_Size.x
+      value: 0.775737
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336332873161689705, guid: e4f94e2def4f614438b9d8008a63b2b6,
+        type: 3}
       propertyPath: m_Size.y
-      value: 0.69481164
+      value: 0.6948116
       objectReference: {fileID: 0}
     - target: {fileID: 5336332873161689705, guid: e4f94e2def4f614438b9d8008a63b2b6,
         type: 3}
@@ -91,7 +97,7 @@ PrefabInstance:
     - target: {fileID: 5336332873161689705, guid: e4f94e2def4f614438b9d8008a63b2b6,
         type: 3}
       propertyPath: m_Center.x
-      value: 0
+      value: 0.0059015155
       objectReference: {fileID: 0}
     - target: {fileID: 5336332873161689705, guid: e4f94e2def4f614438b9d8008a63b2b6,
         type: 3}
@@ -101,7 +107,7 @@ PrefabInstance:
     - target: {fileID: 5336332873161689705, guid: e4f94e2def4f614438b9d8008a63b2b6,
         type: 3}
       propertyPath: m_Center.z
-      value: 0
+      value: 1.4639072e-17
       objectReference: {fileID: 0}
     - target: {fileID: 7888722303863103325, guid: e4f94e2def4f614438b9d8008a63b2b6,
         type: 3}

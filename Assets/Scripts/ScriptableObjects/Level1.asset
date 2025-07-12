@@ -43,9 +43,9 @@ MonoBehaviour:
     img: {fileID: -1289595580, guid: 7ac9942a0e1126644844508954d88d5b, type: 3}
     position: {x: 4, y: 0, z: 6}
     rotation: {x: 0, y: 180, z: 0}
-  - model: {fileID: 8263716622718047072, guid: a905db6970a14c446a0964cc96bd8dea, type: 3}
+  - model: {fileID: 4179555347632450434, guid: 632000ffa19bc244db692e7872632d4c, type: 3}
     img: {fileID: -1289595580, guid: 7ac9942a0e1126644844508954d88d5b, type: 3}
-    position: {x: 1, y: 0, z: 0}
+    position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: -90, z: 0}
   - model: {fileID: 4620157539450659457, guid: 3bb42e3f3dfd38143943f984b369336a, type: 3}
     img: {fileID: -1289595580, guid: 7ac9942a0e1126644844508954d88d5b, type: 3}
