@@ -22,6 +22,8 @@ public class LevelManager : MonoBehaviour
     public Level currentLevel;
 
     private int CountCleaned;
+    [Header("Lista de botones de niveles")]
+    [SerializeField] private LevelBtnsManager[] levelButtons;
 
     [Header("Levels prefabs")]
     [SerializeField] private GameObject player;
@@ -43,6 +45,7 @@ public class LevelManager : MonoBehaviour
         {
             levels.TryAdd(l.id, l);
         }
+        LevelProgressManager.UnlockLevel(1);
     }
     
     private void Start()
@@ -156,6 +159,22 @@ public class LevelManager : MonoBehaviour
         UIAnimator.SetBool("Win",false);
     }
     
+    public void RefreshAllLevelButtons()
+    {
+        LevelBtnsManager[] buttons = FindObjectsOfType<LevelBtnsManager>();
+
+        foreach (var btn in levelButtons)
+        {
+            btn.RefreshButton();
+        }
+    }
+    
+    public void OnLevelCompleted()
+    {
+        int nextLevelIndex = currentLevel.id + 1;
+        LevelProgressManager.UnlockLevel(nextLevelIndex);
+        RefreshAllLevelButtons();
+    }
     
     public void NextLevel()
     {
@@ -165,6 +184,7 @@ public class LevelManager : MonoBehaviour
         if (nextIndex < levels.Count)
         {
             playerScript.Stop();
+            OnLevelCompleted();
             LoadLevel(nextIndex);
         }
         else

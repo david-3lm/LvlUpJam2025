@@ -5,6 +5,7 @@ public class MenuButtonController : MonoBehaviour
 {
     [Header("Menu Content")]
     [SerializeField] private GameObject menuContent;
+    [SerializeField] private GameObject menuLevels;
     [SerializeField] private GameObject backdropMenu;
 
     [Header("Player Controller")]
@@ -43,6 +44,20 @@ public class MenuButtonController : MonoBehaviour
         if (backdropMenu != null) backdropMenu.SetActive(false);
         if (player  != null) player.enabled = true;
     }
+
+    public void OpenLevelMenu()
+    {
+        if (menuLevels != null)
+            menuLevels.SetActive(true);
+    }
+
+    public void ClosePauseLevelMenu()
+    {
+        CloseMenu();
+        if (menuLevels != null)
+            menuLevels.SetActive(false);
+    }
+    
 
     private void OnDestroy()
     {
