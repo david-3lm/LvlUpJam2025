@@ -42,6 +42,8 @@ public class Player : MonoBehaviour
     IEnumerator GameOver()
     {
         Stop();
+        animator.SetTrigger("GameOver");
+        transform.Translate(Vector3.up * 1);
         rb.AddForce(0,10f,0,ForceMode.Impulse);
         yield return new WaitForSeconds(3f);
         Stop();
