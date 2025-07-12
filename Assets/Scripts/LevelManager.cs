@@ -42,7 +42,7 @@ public class LevelManager : MonoBehaviour
             Debug.LogError("Furnature root is not assigned in LevelManager!");
         furnitureBox = GameObject.FindGameObjectsWithTag("FurnitureBox").ToList();
         CountCleaned = 0;
-        //playerScript = player.GetComponent<Player>();
+        playerScript = player.GetComponent<Player>();
     }
 
     public void StartGame()
@@ -92,6 +92,11 @@ public class LevelManager : MonoBehaviour
     {
         foreach (var item in list)
         {
+            if (item.model == null)
+            {
+                Debug.LogWarning($"Model is null for item at position {item.position} with rotation {item.rotation}");
+                continue;
+            }
             GameObject go = Instantiate(item.model, item.position, Quaternion.Euler(item.rotation));
 
             var furniture = go.GetComponent<Furniture>();
