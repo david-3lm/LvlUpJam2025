@@ -25,9 +25,9 @@ public class LevelBtnsManager : MonoBehaviour
     {
         isUnlocked = LevelProgressManager.IsLevelUnlocked(levelData.id);
         button.interactable = isUnlocked;
-        if (isUnlocked)
-            button.image.sprite = levelLockedSprite;
         if (!isUnlocked)
+            button.image.sprite = levelLockedSprite;
+        if (isUnlocked)
             button.image.sprite = levelUnlockedSprite;
     }
     
