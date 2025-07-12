@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -45,6 +46,8 @@ public class Furniture : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.R) || Input.GetMouseButtonDown(1))
                 Rotate(-90);
         }
+        if (isDecoration)
+            gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
     }
     
     void Rotate(float angle)

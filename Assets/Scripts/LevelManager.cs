@@ -34,6 +34,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Player playerScript;
     
     [SerializeField] Animator UIAnimator;
+
+    [SerializeField] private GameObject tutorialCanvas;
     
     [SerializeField] int DebugLvl = 0;
 
@@ -78,6 +80,10 @@ public class LevelManager : MonoBehaviour
             return;
         }
         currentLevel = levels[id];
+        if (currentLevel.id == 1)
+            tutorialCanvas.SetActive(true);
+        else
+            tutorialCanvas.SetActive(false);
         PlayerPrefs.SetInt(PREF_LAST_LEVEL, id);
         PlayerPrefs.Save();
         Debug.Log($"Loading level {id}: {currentLevel.name}");
