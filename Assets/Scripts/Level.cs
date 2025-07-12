@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class ModelNPos
 {
     public GameObject model;
+    public Sprite img;
     public Vector3 position;
     public Vector3 rotation;
 }

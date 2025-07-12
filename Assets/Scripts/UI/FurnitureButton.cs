@@ -13,26 +13,23 @@ public class FurnitureButton : MonoBehaviour
     private Button button;
     public GameObject instance;
 
-    [SerializeField]private TextMeshProUGUI butText; // ESTO CAMBIARA
+    [SerializeField]private Image image;
+    [SerializeField]private TextMeshProUGUI butText;
     
     // Start is called before the first frame update
     void Start()
     {
         button = GetComponent<Button>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void SetFurnitureAndCount(GameObject furni, int count)
+    
+    public void SetFurnitureAndCount(GameObject furni, int count, Sprite img)
     {
         this.name = furni.name;
         furniture = furni;
         this.count = count;
-        butText.text = name + " (" + count.ToString() + ")";
+        butText.text = count.ToString();
+        if (img)
+            image.sprite = img;
     }
 
     public void SelectFurniture()
@@ -44,7 +41,7 @@ public class FurnitureButton : MonoBehaviour
             count--;
             if (count <= 0)
                 button.interactable = false;
-            butText.text = name + " (" + count.ToString() + ")";
+            butText.text = count.ToString();
         }
     }
 
@@ -53,7 +50,7 @@ public class FurnitureButton : MonoBehaviour
         count++;
         button.interactable = true;
         Destroy(instance);
-        butText.text = name + " (" + count.ToString() + ")";
+        butText.text = count.ToString();
     }
     
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28cea43f75dbad648b7dd77a953c3d70, type: 3}
   m_Name: TestLevel
   m_EditorClassIdentifier: 
-  level: 0
+  id: 0
   cols: 7
   rows: 7
   spots:
@@ -25,19 +25,25 @@ MonoBehaviour:
   direction: 0
   tilePrefab: {fileID: 3670916398354334268, guid: d84e696c829392b47b56a16c64161593,
     type: 3}
-  spotPrefab: {fileID: 6229941565162680314, guid: 39bb17d24609dcb4f84cd4946445a548,
-    type: 3}
+  spotPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   poolFurniture:
   - model: {fileID: 6131821560707418307, guid: f06034352b350ca4087702f42d76fd6a, type: 3}
+    img: {fileID: -1958310685, guid: 7ac9942a0e1126644844508954d88d5b, type: 3}
     position: {x: -1.5, y: -4, z: -0.5}
     rotation: {x: -20.7, y: 49, z: -22.2}
   - model: {fileID: 6131821560707418307, guid: f06034352b350ca4087702f42d76fd6a, type: 3}
+    img: {fileID: -1958310685, guid: 7ac9942a0e1126644844508954d88d5b, type: 3}
     position: {x: 0, y: 0, z: 0}
     rotation: {x: -20.7, y: 49, z: -22.2}
   - model: {fileID: 6131821560707418307, guid: f06034352b350ca4087702f42d76fd6a, type: 3}
+    img: {fileID: -1958310685, guid: 7ac9942a0e1126644844508954d88d5b, type: 3}
     position: {x: 2.5, y: -4, z: -0.5}
     rotation: {x: -20.7, y: 49, z: -22.2}
   modelNPoss:
   - model: {fileID: 6131821560707418307, guid: f06034352b350ca4087702f42d76fd6a, type: 3}
+    img: {fileID: 0}
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0}

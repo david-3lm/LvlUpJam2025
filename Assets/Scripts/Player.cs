@@ -103,6 +103,8 @@ public class Player : MonoBehaviour
     public void Stop()
     {
         speed = 0f;
+        gameStarted = false;
+        counter = 0f;
     }
 
     public void DoubleSpeed()

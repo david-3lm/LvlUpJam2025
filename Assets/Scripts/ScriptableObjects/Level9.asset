@@ -50,18 +50,23 @@ MonoBehaviour:
   - {fileID: 6229941565162680314, guid: 70f175dba7547164e921f3102baf06df, type: 3}
   poolFurniture:
   - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    img: {fileID: 21300000, guid: a69bab60a487672449c93f12370f6ee6, type: 3}
     position: {x: -1.5, y: -4, z: -0.5}
     rotation: {x: -20.7, y: 49, z: -22.2}
   - model: {fileID: 3284587934619777861, guid: 31c5264b5ba66464b88a3264c1e24f5b, type: 3}
+    img: {fileID: 21300000, guid: a69bab60a487672449c93f12370f6ee6, type: 3}
     position: {x: 2.5, y: 4, z: 0.5}
     rotation: {x: -20.7, y: 49, z: -22.2}
   modelNPoss:
   - model: {fileID: 6074385879219865924, guid: cd88d3186bf00e647a5e4ea1a06fa031, type: 3}
+    img: {fileID: 0}
     position: {x: 4, y: 0, z: 4}
     rotation: {x: 0, y: -90, z: 0}
   - model: {fileID: 8263716622718047072, guid: a905db6970a14c446a0964cc96bd8dea, type: 3}
+    img: {fileID: 0}
     position: {x: 6, y: 0, z: 8}
     rotation: {x: 0, y: 180, z: 0}
   - model: {fileID: 6131821560707418307, guid: f06034352b350ca4087702f42d76fd6a, type: 3}
+    img: {fileID: 0}
     position: {x: 3, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0}
