@@ -7,6 +7,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed { get; set; }
+
+    public bool isDoubleSpeed = false;
+
     private bool isWaiting = false;
     
     private Animator animator;
@@ -15,6 +18,8 @@ public class Player : MonoBehaviour
     
     float counter;
     public bool gameStarted = false;
+
+
     
 
     // Start is called before the first frame update
@@ -57,17 +62,32 @@ public class Player : MonoBehaviour
         //    IncreaseSpeed();
         //else if (Input.GetKeyDown(KeyCode.Space) && speed >= 1f)
         //    Stop();
-        
+
         //if (Input.GetKeyDown(KeyCode.D))
         //    Rotate(90);
         //else if (Input.GetKeyDown(KeyCode.A))
         //    Rotate(-90);
-        
+
         // if (speed < 1f)
         //     return;
+
         float gravity = rb.velocity.y;
         rb.velocity = transform.forward * speed;
         rb.velocity = new Vector3(rb.velocity.x, gravity, rb.velocity.z);
+    }
+
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
+    }
+
+    public void SwitchSpeed()
+    {
+        isDoubleSpeed = !isDoubleSpeed;
+        if (isDoubleSpeed && speed == 2f)
+            DoubleSpeed();
+        else if (speed == 4f)
+            SetSpeed(2f);
     }
 
     public void SwitchMovement()
@@ -91,6 +111,8 @@ public class Player : MonoBehaviour
         if (!gameStarted)
             gameStarted = true;
         IncreaseSpeed();
+        if (isDoubleSpeed)
+            DoubleSpeed();
         //transform.Translate(Vector3.forward * (speed * Time.deltaTime));
     }
 
@@ -109,7 +131,7 @@ public class Player : MonoBehaviour
 
     public void DoubleSpeed()
     {
-        speed = 4f;
+        speed *= 2;
     }
 
     //ROTATE RIGHT 90 ROTATE LEFT -90

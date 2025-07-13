@@ -8,13 +8,18 @@ public class PlayToggleController : MonoBehaviour
     [SerializeField] private Image targetImage;
     [SerializeField] private Image backgroundColorImage;
 
+    [Header("Game References")]
+    [SerializeField] private Player player;
+    [SerializeField] private LevelManager levelManager;
+    [SerializeField] private FurnitureButtonHandler furnitureButtonHandler;
+
     [Header("Play Icons")]
     [SerializeField] private Sprite playSprite;
     [SerializeField] private Color playColor = Color.green;
 
     [Header("Pause Icons")]
-    [SerializeField] private Sprite pauseSprite;
-    [SerializeField] private Color pauseColor = Color.red;
+    [SerializeField] private Sprite restartSprite;
+    [SerializeField] private Color restartColor = Color.red;
 
     private void Awake()
     {
@@ -28,10 +33,24 @@ public class PlayToggleController : MonoBehaviour
 
     private void UpdateIcon(bool isOn)
     {
+        if (isOn)
+        {
+            Debug.LogWarning($"Speed is now: {(player.isDoubleSpeed ? "Double" : "Base")}");
+            player.Run();
+            Debug.LogWarning($"Speed is now: {(player.isDoubleSpeed ? "Double" : "Base")}");
+        }
+        else 
+        {
+            player.Stop();
+            levelManager.ReloadLevel();
+            furnitureButtonHandler.GetLevel();
+            isOn = false;
+        }
+
         if (targetImage != null)
         {
-            targetImage.sprite = isOn ? pauseSprite : playSprite;
-            backgroundColorImage.color = isOn ? pauseColor : playColor;
+            targetImage.sprite = isOn ? restartSprite : playSprite;
+            backgroundColorImage.color = isOn ? restartColor : playColor;
         }
     }
 
