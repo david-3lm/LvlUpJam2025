@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class SpeedBtnController : MonoBehaviour
@@ -14,21 +15,15 @@ public class SpeedBtnController : MonoBehaviour
 
     [Header("Speed icons")]
     [SerializeField] private Sprite speedBaseSprite;
-    [SerializeField] private Sprite speedDoubleSprite;
     [SerializeField] private Color speedBaseColor = Color.green;
+    [SerializeField] private Sprite speedDoubleSprite;
     [SerializeField] private Color speedDoubleColor = Color.red;
-
-    [Header("Caca")]
-    [SerializeField] private RectTransform rt;
-    private Vector2 originalSize;
-    private Vector2 originalPos;
+    [SerializeField] private GameObject doubleSpeedMiniIcon;
 
 
     private void Awake()
     {
         btn.onClick.AddListener(OnButtonClicked);
-        originalSize = rt.sizeDelta;
-        originalPos = rt.anchoredPosition;
     }
 
     private void OnButtonClicked()
@@ -36,19 +31,10 @@ public class SpeedBtnController : MonoBehaviour
         player.SwitchSpeed();
         if (targetImage != null)
         {
-            targetImage.sprite = player.isDoubleSpeed ? speedDoubleSprite : speedBaseSprite;
-            backgroundColorImage.color = player.isDoubleSpeed ? speedDoubleColor : speedBaseColor;
-
-            if (player.isDoubleSpeed)
-            {
-                rt.sizeDelta = originalSize + new Vector2(15, 15);
-                rt.anchoredPosition = originalPos + new Vector2(10, 0);
-            }
-            else
-            {
-                rt.sizeDelta = originalSize;
-                rt.anchoredPosition = originalPos;
-            }
+            if (targetImage != null) targetImage.sprite = player.isDoubleSpeed ? speedDoubleSprite : speedBaseSprite;
+            if (backgroundColorImage != null) backgroundColorImage.color = player.isDoubleSpeed ? speedDoubleColor : speedBaseColor;
+            if (doubleSpeedMiniIcon != null) doubleSpeedMiniIcon.SetActive(player.isDoubleSpeed);
+            EventSystem.current.SetSelectedGameObject(null);
         }
     }
 

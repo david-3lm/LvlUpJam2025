@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MuteToggleController : MonoBehaviour
@@ -45,13 +46,14 @@ public class MuteToggleController : MonoBehaviour
 
 		var audioScript = adioManager.GetComponent<AudioVolumeManager>();
 		audioScript._isMute = isMuted;
-	}
+        EventSystem.current.SetSelectedGameObject(null);
+    }
 
 	private void UpdateIcon(bool isMuted)
 	{
 		if (targetImage != null)
 			targetImage.sprite = isMuted ? mutedSprite : unmutedSprite;
-	}
+    }
 
 
 	private void OnDestroy()

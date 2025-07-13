@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MenuButtonController : MonoBehaviour
@@ -17,22 +18,21 @@ public class MenuButtonController : MonoBehaviour
     [Header("Menu State")]
     [SerializeField] private bool isOpen = false;
 
-    [SerializeField] private GameObject _leftBtn;
-    [SerializeField] private GameObject _rightBtn;
+    [SerializeField] private Button _leftBtn;
+    int leftBtnClicksCount;
+    [SerializeField] private Toggle _rightBtn;
+    int rightBtnClicksCount;
 
     private void Awake()
     {
         btn = GetComponent<Button>();
         btn.onClick.AddListener(ToggleMenu);
+        _leftBtn.onClick.AddListener(OnLeftBtnClicked);
+        _rightBtn.onValueChanged.AddListener(OnRightBtnClicked);
 
         if (menuContent != null) menuContent.SetActive(isOpen);
         if (backdropMenu != null) backdropMenu.SetActive(isOpen);
     }
-
-	private void Update()
-	{
-		ClickCouner();
-	}
 
 	public void ToggleMenu()
     {
@@ -41,7 +41,6 @@ public class MenuButtonController : MonoBehaviour
         if (menuContent != null) menuContent.SetActive(isOpen);
         if (backdropMenu != null) backdropMenu.SetActive(isOpen);
         if (player != null) player.enabled = !isOpen;
-        Debug.Log(isOpen ? "Menu opened" : "Menu closed");
     }
 
     public void CloseMenu()
@@ -53,6 +52,7 @@ public class MenuButtonController : MonoBehaviour
         if (menuContent != null) menuContent.SetActive(false);
         if (backdropMenu != null) backdropMenu.SetActive(false);
         if (player  != null) player.enabled = true;
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void OpenLevelMenu()
@@ -68,10 +68,18 @@ public class MenuButtonController : MonoBehaviour
             menuLevels.SetActive(false);
     }
 
-	private void ClickCouner()
+    private void OnLeftBtnClicked()
+    {
+        leftBtnClicksCount++;
+        //Debug.Log($"Right button clicked {leftBtnClicksCount} times.");
+    }
+
+    private void OnRightBtnClicked(bool isOn)
 	{
-		throw new NotImplementedException();
-	}
+        if (!isOn) return;
+        rightBtnClicksCount++;
+        //Debug.Log($"Right button clicked {rightBtnClicksCount} times.");
+    }
 
 	private void OnDestroy()
     {

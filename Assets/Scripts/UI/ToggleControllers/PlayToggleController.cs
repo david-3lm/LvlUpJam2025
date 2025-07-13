@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PlayToggleController : MonoBehaviour
@@ -34,17 +35,12 @@ public class PlayToggleController : MonoBehaviour
     private void UpdateIcon(bool isOn)
     {
         if (isOn)
-        {
-            Debug.LogWarning($"Speed is now: {(player.isDoubleSpeed ? "Double" : "Base")}");
             player.Run();
-            Debug.LogWarning($"Speed is now: {(player.isDoubleSpeed ? "Double" : "Base")}");
-        }
         else 
         {
             player.Stop();
             levelManager.ReloadLevel();
             furnitureButtonHandler.GetLevel();
-            isOn = false;
         }
 
         if (targetImage != null)
@@ -52,6 +48,7 @@ public class PlayToggleController : MonoBehaviour
             targetImage.sprite = isOn ? restartSprite : playSprite;
             backgroundColorImage.color = isOn ? restartColor : playColor;
         }
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     private void OnDestroy()
