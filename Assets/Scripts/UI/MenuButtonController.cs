@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,9 @@ public class MenuButtonController : MonoBehaviour
     [Header("Menu State")]
     [SerializeField] private bool isOpen = false;
 
+    [SerializeField] private GameObject _leftBtn;
+    [SerializeField] private GameObject _rightBtn;
+
     private void Awake()
     {
         btn = GetComponent<Button>();
@@ -25,7 +29,12 @@ public class MenuButtonController : MonoBehaviour
         if (backdropMenu != null) backdropMenu.SetActive(isOpen);
     }
 
-    public void ToggleMenu()
+	private void Update()
+	{
+		ClickCouner();
+	}
+
+	public void ToggleMenu()
     {
         isOpen = !isOpen;
         if (menuLevels != null) menuLevels.SetActive(false);
@@ -59,7 +68,12 @@ public class MenuButtonController : MonoBehaviour
             menuLevels.SetActive(false);
     }
 
-    private void OnDestroy()
+	private void ClickCouner()
+	{
+		throw new NotImplementedException();
+	}
+
+	private void OnDestroy()
     {
         if (btn != null)
         {
