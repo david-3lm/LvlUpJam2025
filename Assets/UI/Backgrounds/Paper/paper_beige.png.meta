@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fb698e37d8526b2408630b3bf565fdcd
+guid: 62be041a4dbf15d418410399ec0b5454
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: paper_beige_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 311
+        width: 513
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8e9362ebc94da4abe82920e55377b3
+      internalID: -1107671236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paper_beige_1
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 343
+        width: 586
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b79ec52a4663241bd68883373b083d
+      internalID: 1580405643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paper_beige_2
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 751
+        width: 233
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde8d4b2ea711604c9e3c645bfd69e6c
+      internalID: 787600534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paper_beige_3
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 352
+        width: 209
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c5ba3a40d8ea143a6e6b1398a62eaa
+      internalID: -402006981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paper_beige_4
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 325
+        width: 233
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3acbc3de7220e84a9b160cae4bc9acd
+      internalID: -452951015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paper_beige_5
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 34
+        width: 474
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55132aa27e36f8540abe9f204fe13bc0
+      internalID: 1081980274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +271,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      paper_beige_0: -1107671236
+      paper_beige_1: 1580405643
+      paper_beige_2: 787600534
+      paper_beige_3: -402006981
+      paper_beige_4: -452951015
+      paper_beige_5: 1081980274
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

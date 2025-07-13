@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 0f3fba6c834666841ac5691a895dd7cb
+guid: 866c67720ef871d4c8b4795c793b8c5f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,8 +37,8 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icons 1_0
+      name: Mask group_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 1514
-        width: 516
-        height: 512
+        x: 1638
+        y: 5689
+        width: 784
+        height: 1146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ce01f5784fbf604d97d1cf385549a01
-      internalID: -1763186559
+      spriteID: c22c173af444386459b34f403cdb464d
+      internalID: -818699751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons 1_1
+      name: Mask group_1
       rect:
         serializedVersion: 2
-        x: 566
-        y: 1514
-        width: 516
-        height: 508
+        x: 1632
+        y: 4329
+        width: 707
+        height: 1022
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2dc676a134cd064da7fed8dd14683bb
-      internalID: -1267353943
+      spriteID: 4e0d91a7d20e40140952a16a04e29895
+      internalID: -1370335951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons 1_2
+      name: Mask group_3
       rect:
         serializedVersion: 2
-        x: 1119
-        y: 1510
-        width: 519
-        height: 508
+        x: 2910
+        y: 4251
+        width: 779
+        height: 1100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d4e0601a5cfdbf4d927920e179fc5d5
-      internalID: -277866590
+      spriteID: 6157665a2f6bfcd4a8528fd701ef3067
+      internalID: 44096494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons 1_3
+      name: Mask group_8
       rect:
         serializedVersion: 2
-        x: 30
-        y: 970
-        width: 516
-        height: 512
+        x: 2097
+        y: 3296
+        width: 1592
+        height: 890
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccd0461149ddb2f4e8116abebcde8597
-      internalID: -1331332699
+      spriteID: a881063c99926a14b92c5fd840a4cee6
+      internalID: -1620898064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons 1_4
+      name: Mask group_9
       rect:
         serializedVersion: 2
-        x: 582
-        y: 970
-        width: 516
-        height: 508
+        x: 177
+        y: 0
+        width: 1722
+        height: 2049
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,113 +234,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9fe26f3352f61947ac97456e8609088
-      internalID: -778478224
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icons 1_5
-      rect:
-        serializedVersion: 2
-        x: 1130
-        y: 966
-        width: 516
-        height: 508
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9efe036ee3a7abf44adeb3c44d7f9fc0
-      internalID: 1442749851
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icons 1_6
-      rect:
-        serializedVersion: 2
-        x: 1494
-        y: 478
-        width: 516
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7248374a8286ca248bec2d835d51a2d8
-      internalID: 1937539222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icons 1_7
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 26
-        width: 512
-        height: 520
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8926a758cf641cb46a92d1c9796a5625
-      internalID: 1071688765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icons 1_8
-      rect:
-        serializedVersion: 2
-        x: 586
-        y: 42
-        width: 512
-        height: 516
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 686f2aa5b77e4394faee1a0fdb6a812f
-      internalID: -35924933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icons 1_9
-      rect:
-        serializedVersion: 2
-        x: 1114
-        y: 34
-        width: 516
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f2f06fb2616a1f419f021942a0869f5
-      internalID: -1624181108
+      spriteID: d7db3840da39efb4697081da270b42af
+      internalID: -354491464
       vertices: []
       indices: 
       edges: []
@@ -348,7 +243,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: bfc20e51df2575c47b7c73ecab4003c5
     internalID: 0
     vertices: []
     indices: 
@@ -356,16 +251,93 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      icons 1_0: -1763186559
-      icons 1_1: -1267353943
-      icons 1_2: -277866590
-      icons 1_3: -1331332699
-      icons 1_4: -778478224
-      icons 1_5: 1442749851
-      icons 1_6: 1937539222
-      icons 1_7: 1071688765
-      icons 1_8: -35924933
-      icons 1_9: -1624181108
+      Mask group_0: -818699751
+      Mask group_1: -1370335951
+      Mask group_10: -1895991949
+      Mask group_11: 1809631608
+      Mask group_12: 1892576162
+      Mask group_13: -1919042854
+      Mask group_14: 1171825828
+      Mask group_15: -389292790
+      Mask group_16: 24640789
+      Mask group_17: 1328532093
+      Mask group_18: 899474861
+      Mask group_19: 643252938
+      Mask group_2: 2104754683
+      Mask group_20: 358070226
+      Mask group_21: 1689094959
+      Mask group_22: -1588893477
+      Mask group_23: 1246605610
+      Mask group_24: 984209647
+      Mask group_25: -1338651742
+      Mask group_26: -546162819
+      Mask group_27: 1840802100
+      Mask group_28: -1300409190
+      Mask group_29: 605869479
+      Mask group_3: 44096494
+      Mask group_30: 1851797913
+      Mask group_31: -1601489450
+      Mask group_32: 1363168883
+      Mask group_33: 817905673
+      Mask group_34: -696035302
+      Mask group_35: 1155086043
+      Mask group_36: -457637894
+      Mask group_37: -523248743
+      Mask group_38: 1818309968
+      Mask group_39: 767005465
+      Mask group_4: 1630842423
+      Mask group_40: -247939500
+      Mask group_41: 1345348045
+      Mask group_42: -506104982
+      Mask group_43: -897585484
+      Mask group_44: -886207789
+      Mask group_45: -1322329668
+      Mask group_46: -1415685536
+      Mask group_47: -1148606512
+      Mask group_48: -1956713446
+      Mask group_49: -1138954579
+      Mask group_5: -1708189357
+      Mask group_50: 1363686699
+      Mask group_51: -95574005
+      Mask group_52: 1190572207
+      Mask group_53: -236629168
+      Mask group_54: -1686945309
+      Mask group_55: -196221426
+      Mask group_56: -531024316
+      Mask group_57: -92658920
+      Mask group_58: -117577678
+      Mask group_59: -2096432360
+      Mask group_6: -1355174746
+      Mask group_60: -248883134
+      Mask group_61: 1825975774
+      Mask group_62: 1590561431
+      Mask group_63: -893751652
+      Mask group_64: 409027831
+      Mask group_65: 806886175
+      Mask group_66: 761625850
+      Mask group_67: -798574445
+      Mask group_68: -1976103324
+      Mask group_69: -1553801990
+      Mask group_7: -1342451630
+      Mask group_70: -158221635
+      Mask group_71: 797883174
+      Mask group_72: -1527461441
+      Mask group_73: 1747322759
+      Mask group_74: -785665378
+      Mask group_75: 36138706
+      Mask group_76: 929950782
+      Mask group_77: -340115638
+      Mask group_78: 1711068509
+      Mask group_79: -1179400370
+      Mask group_8: -1620898064
+      Mask group_80: 1103796679
+      Mask group_81: -1564930166
+      Mask group_82: 1439423248
+      Mask group_83: -1866400173
+      Mask group_84: -1602741587
+      Mask group_85: 625845725
+      Mask group_86: 1607686921
+      Mask group_9: -354491464
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
