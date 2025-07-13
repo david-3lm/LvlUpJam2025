@@ -38,7 +38,12 @@ public class MenuButtonController : MonoBehaviour
     {
         isOpen = !isOpen;
         if (menuLevels != null) menuLevels.SetActive(false);
-        if (menuContent != null) menuContent.SetActive(isOpen);
+        if (menuContent != null)
+        {
+            menuContent.SetActive(isOpen);
+            if (!isOpen)
+                EventSystem.current.SetSelectedGameObject(null);
+        }
         if (backdropMenu != null) backdropMenu.SetActive(isOpen);
         if (player != null) player.enabled = !isOpen;
     }
@@ -52,7 +57,6 @@ public class MenuButtonController : MonoBehaviour
         if (menuContent != null) menuContent.SetActive(false);
         if (backdropMenu != null) backdropMenu.SetActive(false);
         if (player  != null) player.enabled = true;
-        EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void OpenLevelMenu()
