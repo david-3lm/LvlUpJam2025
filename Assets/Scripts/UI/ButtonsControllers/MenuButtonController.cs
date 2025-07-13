@@ -85,14 +85,11 @@ public class MenuButtonController : MonoBehaviour
     private void OnLeftBtnClicked()
     {
         leftBtnClicksCount++;
-        Debug.Log($"Right button clicked {leftBtnClicksCount} times.");
     }
 
     private void OnRightBtnClicked(bool isOn)
 	{
-        if (!isOn) return;
         rightBtnClicksCount++;
-        Debug.Log($"Right button clicked {rightBtnClicksCount} times.");
     }
 
 	private void OnDestroy()
@@ -105,7 +102,6 @@ public class MenuButtonController : MonoBehaviour
 
     public void LaunchMenu()
     {
-        //Debug.LogWarningFormat("TExt = " + soundNum.text);
         if (leftBtnClicksCount == 6 && rightBtnClicksCount == 9 && soundNum.text.Equals("69%", StringComparison.OrdinalIgnoreCase) && !_isBackroundOn)
         {
             backgroundBtn.gameObject.SetActive(true);

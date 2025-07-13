@@ -37,8 +37,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Player playerScript;
     
     [SerializeField] Animator UIAnimator;
-    [SerializeField] Animator AnimationLevel15;
-
+    [SerializeField] private GameObject level15End;
     [SerializeField] private GameObject tutorialCanvas;
     
     [SerializeField] int DebugLvl = 0;
@@ -49,7 +48,7 @@ public class LevelManager : MonoBehaviour
     private PlayToggleController playToggleScript;
     
     [SerializeField] private GameObject menuLevels;
-    [SerializeField] private GameObject animator;
+    
 
     private void Awake()
     {
@@ -176,6 +175,7 @@ public class LevelManager : MonoBehaviour
     {
         if (currentLevel.id == 15)
         {
+            level15End.SetActive(true);
             UIAnimator.SetBool("Win",true);
             playerScript.Stop();
             playerScript.PlaySound(SFX_P.win);
@@ -186,6 +186,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
+            level15End.SetActive(false);
             UIAnimator.SetBool("Win",true);
             playerScript.Stop();
             playerScript.PlaySound(SFX_P.win);
