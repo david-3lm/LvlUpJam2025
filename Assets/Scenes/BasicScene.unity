@@ -2368,7 +2368,7 @@ PrefabInstance:
     - target: {fileID: 449384558639864058, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 449384558639864058, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
@@ -2455,6 +2455,41 @@ PrefabInstance:
       propertyPath: levelManagerScript
       value: 
       objectReference: {fileID: 920688021}
+    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1852707711}
+    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CloseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MenuButtonController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1990218527313166717, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: levelManagerScript
