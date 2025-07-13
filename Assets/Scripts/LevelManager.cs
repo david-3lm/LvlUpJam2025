@@ -166,6 +166,7 @@ public class LevelManager : MonoBehaviour
     {
         UIAnimator.SetBool("Win",true);
         playerScript.Stop();
+        playerScript.PlaySound(SFX_P.win);
         yield return new WaitForSeconds(1f);
         NextLevel();
         yield return new WaitForSeconds(1f);

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
@@ -13,15 +14,16 @@ public class Player : MonoBehaviour
     private bool isWaiting = false;
     
     private Animator animator;
+    [FormerlySerializedAs("particle")] [SerializeField]private ParticleSystem particleExplosion;
+    [SerializeField] private ParticleSystem particleClean;
+    [SerializeField] private SFX_Player sfx_Player;
     
     [SerializeField]private Rigidbody rb;
     
     float counter;
     public bool gameStarted = false;
 
-
     
-
     // Start is called before the first frame update
     void Start()
     {
@@ -49,10 +51,16 @@ public class Player : MonoBehaviour
         Stop();
         animator.SetTrigger("GameOver");
         transform.Translate(Vector3.up * 1);
+        sfx_Player.PlaySound(SFX_P.gameOver);
         rb.AddForce(0,10f,0,ForceMode.Impulse);
+        particleExplosion.Play();
         yield return new WaitForSeconds(3f);
         Stop();
+        particleExplosion.Clear();
+        particleExplosion.Stop();
         FindObjectOfType<LevelManager>().ReloadLevel();
+        FindObjectOfType<FurnitureButtonHandler>().GetLevel();
+
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -110,6 +118,7 @@ public class Player : MonoBehaviour
     {
         if (!gameStarted)
             gameStarted = true;
+        sfx_Player.PlaySound(SFX_P.start);
         IncreaseSpeed();
         if (isDoubleSpeed)
             DoubleSpeed();
@@ -137,6 +146,7 @@ public class Player : MonoBehaviour
     //ROTATE RIGHT 90 ROTATE LEFT -90
     void Rotate(float angle)
     {
+        sfx_Player.PlaySound(SFX_P.crash);
         transform.position = new Vector3(Mathf.Round(transform.position.x), transform.position.y, Mathf.Round(transform.position.z));
         var rot = transform.rotation.eulerAngles.y;
 
@@ -170,6 +180,8 @@ public class Player : MonoBehaviour
     public void Collect()
     {
         animator.SetTrigger("Collect");
+        particleClean.Play();
+        sfx_Player.PlaySound(SFX_P.clean);
     }
 
     private IEnumerator WaitBeforeNextCollision()
@@ -178,5 +190,10 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
         isWaiting = false;
         animator.SetBool("Crashed", false);
+    }
+
+    public void PlaySound(SFX_P p)
+    {
+        sfx_Player.PlaySound(p);
     }
 }

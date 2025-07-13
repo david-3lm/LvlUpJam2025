@@ -5,12 +5,15 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(SFX_Furniture))]
 public class Furniture : MonoBehaviour
 {
     private bool isSelected;
     private Plane dragPlane;
     private Camera cam;
     private Vector3 offset;
+    
+    private SFX_Furniture sfx;
 
     private Vector3 startPosition;
     private Transform player;
@@ -33,6 +36,7 @@ public class Furniture : MonoBehaviour
         furnitureParent = transform.parent;
         startPosition = transform.localPosition;
         levelManager = FindObjectOfType<LevelManager>();
+        sfx = GetComponent<SFX_Furniture>();
         checkers = GetComponentsInChildren<OverlapChecker>().ToList();
     }
 
@@ -51,6 +55,7 @@ public class Furniture : MonoBehaviour
     
     void Rotate(float angle)
     {
+        sfx.PlaySound(SFX_F.rotate);
         transform.RotateAround(transform.position, Vector3.up, angle);
     }
 
@@ -127,6 +132,7 @@ public class Furniture : MonoBehaviour
         {
             WrongPosition();
         }
+        sfx.PlaySound(SFX_F.put);
         EmptyChecker();
         isSelected = false;
         clicked = false;
