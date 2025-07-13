@@ -318,19 +318,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4249e80db9121a4eba87046709fb783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &300051833 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2085229929450610581, guid: 004e5893b05cabd43a475ce669185ff8,
-    type: 3}
-  m_PrefabInstance: {fileID: 5183601708701793387}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &300051834 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1692104979928009217, guid: 004e5893b05cabd43a475ce669185ff8,
     type: 3}
   m_PrefabInstance: {fileID: 5183601708701793387}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300051833}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
@@ -342,7 +336,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5183601708701793387}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300051833}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c637581239b307349b69af96c9b3af4c, type: 3}
@@ -1810,18 +1804,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698913811}
   m_CullTransparentMesh: 1
---- !u!114 &1852707711 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 878821662379069259, guid: 004e5893b05cabd43a475ce669185ff8,
-    type: 3}
-  m_PrefabInstance: {fileID: 5183601708701793387}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6b5401a11ba421458c860da94ac1c88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1943720927
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,154 +2454,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIRoot
       objectReference: {fileID: 0}
-    - target: {fileID: 449384558639864058, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 449384558639864058, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 449384558639864058, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1852707711}
-    - target: {fileID: 449384558639864058, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 449384558639864058, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ClosePauseLevelMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 449384558639864058, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MenuButtonController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 449384558639864058, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 878821662379069259, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1036203688}
-    - target: {fileID: 893466503265885307, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
     - target: {fileID: 1322901915951282980, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: levelManagerScript
       value: 
       objectReference: {fileID: 920688021}
-    - target: {fileID: 1440906705691952690, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
-    - target: {fileID: 1485199553172106082, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
-    - target: {fileID: 1692104979928009217, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1692104979928009217, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1692104979928009217, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 300051833}
-    - target: {fileID: 1692104979928009217, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1692104979928009217, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1784138972477816401, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: levelManagerScript
       value: 
       objectReference: {fileID: 920688021}
-    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1852707711}
-    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: CloseMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: MenuButtonController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1987163679456915337, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1990218527313166717, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
-    - target: {fileID: 2301503913359242818, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
-    - target: {fileID: 2940542145110835137, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
-    - target: {fileID: 2995411016116927584, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
-    - target: {fileID: 3187766035507819555, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManager
       value: 
       objectReference: {fileID: 920688021}
     - target: {fileID: 3362481036312852884, guid: 004e5893b05cabd43a475ce669185ff8,
@@ -2652,31 +2504,11 @@ PrefabInstance:
       propertyPath: levelManagerScript
       value: 
       objectReference: {fileID: 920688021}
-    - target: {fileID: 4646632780012380423, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
-    - target: {fileID: 4775274302198304948, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
-    - target: {fileID: 5077888824309774415, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
     - target: {fileID: 5215746817389089868, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: levelManagerScript
       value: 
       objectReference: {fileID: 920688021}
-    - target: {fileID: 5805726126178740118, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1036203688}
     - target: {fileID: 5966621238681604201, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: levelManagerScript
@@ -2737,11 +2569,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7017889670389055809, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
     - target: {fileID: 7194204203212592543, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: adioManager
@@ -2752,11 +2579,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1036203688}
-    - target: {fileID: 7370935563524466291, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
     - target: {fileID: 7387510090967507409, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: levelManagerScript
@@ -2767,32 +2589,12 @@ PrefabInstance:
       propertyPath: levelManagerScript
       value: 
       objectReference: {fileID: 920688021}
-    - target: {fileID: 7629437083838074550, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
-    - target: {fileID: 7829832301849756621, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
     - target: {fileID: 8430183113249029310, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: levelManagerScript
       value: 
       objectReference: {fileID: 920688021}
     - target: {fileID: 8594576419714884912, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
-    - target: {fileID: 8697608787819737080, guid: 004e5893b05cabd43a475ce669185ff8,
-        type: 3}
-      propertyPath: levelManagerScript
-      value: 
-      objectReference: {fileID: 920688021}
-    - target: {fileID: 8885532908480164126, guid: 004e5893b05cabd43a475ce669185ff8,
         type: 3}
       propertyPath: levelManagerScript
       value: 
