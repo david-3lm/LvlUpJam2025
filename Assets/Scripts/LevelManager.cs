@@ -37,6 +37,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Player playerScript;
     
     [SerializeField] Animator UIAnimator;
+    [SerializeField] Animator AnimationLevel15;
 
     [SerializeField] private GameObject tutorialCanvas;
     
@@ -46,6 +47,9 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private Toggle playToggle;
     private PlayToggleController playToggleScript;
+    
+    [SerializeField] private GameObject menuLevels;
+    [SerializeField] private GameObject animator;
 
     private void Awake()
     {
@@ -170,13 +174,26 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator EndLevelCoroutine()
     {
-        UIAnimator.SetBool("Win",true);
-        playerScript.Stop();
-        playerScript.PlaySound(SFX_P.win);
-        yield return new WaitForSeconds(1f);
-        NextLevel();
-        yield return new WaitForSeconds(1f);
-        UIAnimator.SetBool("Win",false);
+        if (currentLevel.id == 15)
+        {
+            UIAnimator.SetBool("Win",true);
+            playerScript.Stop();
+            playerScript.PlaySound(SFX_P.win);
+            yield return new WaitForSeconds(1f);
+            menuLevels.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            UIAnimator.SetBool("Win",false);
+        }
+        else
+        {
+            UIAnimator.SetBool("Win",true);
+            playerScript.Stop();
+            playerScript.PlaySound(SFX_P.win);
+            yield return new WaitForSeconds(1f);
+            NextLevel();
+            yield return new WaitForSeconds(1f);
+            UIAnimator.SetBool("Win",false);
+        }
     }
     
     public void RefreshAllLevelButtons()
