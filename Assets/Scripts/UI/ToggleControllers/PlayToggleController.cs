@@ -27,22 +27,30 @@ public class PlayToggleController : MonoBehaviour
         toggle.onValueChanged.AddListener(OnToggleChanged);
     }
 
+    private void Update()
+    {
+        UpdateIcon(toggle.isOn);
+    }
+
     private void OnToggleChanged(bool isOn)
     {
+        UpdateSpeed(isOn);
         UpdateIcon(isOn);
     }
 
-    private void UpdateIcon(bool isOn)
+    private void UpdateSpeed(bool isOn)
     {
         if (isOn)
             player.Run();
-        else 
+        else
         {
             player.Stop();
             levelManager.ReloadLevel();
             furnitureButtonHandler.GetLevel();
         }
-
+    }
+    public void UpdateIcon(bool isOn)
+    {
         if (targetImage != null)
         {
             targetImage.sprite = isOn ? restartSprite : playSprite;

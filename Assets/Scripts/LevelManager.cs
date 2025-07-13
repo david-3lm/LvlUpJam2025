@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -44,6 +44,9 @@ public class LevelManager : MonoBehaviour
 
     private const string PREF_LAST_LEVEL = "LastLevelIndex";
 
+    [SerializeField] private Toggle playToggle;
+    private PlayToggleController playToggleScript;
+
     private void Awake()
     {
         foreach (var l in levelList)
@@ -62,6 +65,7 @@ public class LevelManager : MonoBehaviour
             Debug.LogError("Furnature root is not assigned in LevelManager!");
         CountCleaned = 0;
         playerScript = player.GetComponent<Player>();
+        playToggleScript = playToggle.gameObject.GetComponent<PlayToggleController>();
     }
     
     public void StartGame()
@@ -77,8 +81,10 @@ public class LevelManager : MonoBehaviour
 
     public void LoadLevel(int id)
     {
+        CountCleaned = 0;
         RemoveLevel();
         playerScript.Stop();
+        if (playToggle != null) playToggle.SetIsOnWithoutNotify(false);
         Camera.main.transform.position = cameraTransform;
         if (!levels.ContainsKey(id))
         {
@@ -223,7 +229,6 @@ public class LevelManager : MonoBehaviour
     public void ReloadLevel()
     {
         playerScript.gameStarted = false;
-        CountCleaned = 0;
         LoadLevel(currentLevel.id);
     }
     

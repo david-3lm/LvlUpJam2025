@@ -324,6 +324,30 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5183601708701793387}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &300051834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1692104979928009217, guid: 004e5893b05cabd43a475ce669185ff8,
+    type: 3}
+  m_PrefabInstance: {fileID: 5183601708701793387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300051833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &300051836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 107710436196623429, guid: 004e5893b05cabd43a475ce669185ff8,
+    type: 3}
+  m_PrefabInstance: {fileID: 5183601708701793387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300051833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c637581239b307349b69af96c9b3af4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &341388259 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3619350728102833238, guid: 004e5893b05cabd43a475ce669185ff8,
@@ -1982,6 +2006,11 @@ PrefabInstance:
       objectReference: {fileID: 558464113}
     - target: {fileID: 909295783465283651, guid: d423738e165ad784da647881ba9d071e,
         type: 3}
+      propertyPath: playToggle
+      value: 
+      objectReference: {fileID: 300051834}
+    - target: {fileID: 909295783465283651, guid: d423738e165ad784da647881ba9d071e,
+        type: 3}
       propertyPath: currentLevel
       value: 
       objectReference: {fileID: 11400000, guid: d4c0a67bd9f0346449cba3e635c61515,
@@ -1996,6 +2025,11 @@ PrefabInstance:
       propertyPath: tutorialCanvas
       value: 
       objectReference: {fileID: 1026389689}
+    - target: {fileID: 909295783465283651, guid: d423738e165ad784da647881ba9d071e,
+        type: 3}
+      propertyPath: playToggleScript
+      value: 
+      objectReference: {fileID: 300051836}
     - target: {fileID: 909295783465283651, guid: d423738e165ad784da647881ba9d071e,
         type: 3}
       propertyPath: levels.Array.size
@@ -2066,6 +2100,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 97bed04783f07994f854828fc5dfcd5c,
         type: 2}
+    - target: {fileID: 909295783465283651, guid: d423738e165ad784da647881ba9d071e,
+        type: 3}
+      propertyPath: playToggleController
+      value: 
+      objectReference: {fileID: 300051836}
     - target: {fileID: 909295783465283651, guid: d423738e165ad784da647881ba9d071e,
         type: 3}
       propertyPath: levels.Array.data[10]
