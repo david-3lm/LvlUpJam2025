@@ -25,6 +25,7 @@ public class MenuButtonController : MonoBehaviour
     int rightBtnClicksCount;
     [SerializeField] private TMP_Text soundNum;
     [SerializeField] private GameObject backgroundMenu;
+    [SerializeField] private Button backgroundBtn;
     private bool _isBackroundOn = false;
 
     private void Awake()
@@ -102,13 +103,18 @@ public class MenuButtonController : MonoBehaviour
         }
     }
 
-    private void LaunchMenu()
+    public void LaunchMenu()
     {
         //Debug.LogWarningFormat("TExt = " + soundNum.text);
         if (leftBtnClicksCount == 6 && rightBtnClicksCount == 9 && soundNum.text.Equals("69%", StringComparison.OrdinalIgnoreCase) && !_isBackroundOn)
         {
-            Instantiate(backgroundMenu);
-            _isBackroundOn = true;
-		}
+            backgroundBtn.gameObject.SetActive(true);
+        }
 	}
+
+    public void ShowMenu()
+    {
+        Instantiate(backgroundMenu);
+        _isBackroundOn = true;
+    }
 }
