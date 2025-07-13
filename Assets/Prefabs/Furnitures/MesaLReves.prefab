@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDecoration: 0
   isPlaying: 0
+  clicked: 1
 --- !u!1 &7947982096700226733
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +293,12 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 607e9c5381e44e84b86d18a4ad99dd56, type: 2}
+    - target: {fileID: 3419609435163704909, guid: 1235b37946c670043ade5882f07f16f1,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -7578199775284158912, guid: e55690d9e8c21024e8f0a7d849c2912e,
+        type: 3}
     - target: {fileID: 3808143333193915641, guid: 1235b37946c670043ade5882f07f16f1,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
