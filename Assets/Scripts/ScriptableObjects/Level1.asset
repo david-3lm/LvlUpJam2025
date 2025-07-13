@@ -39,9 +39,9 @@ MonoBehaviour:
     position: {x: 2, y: 4, z: 0}
     rotation: {x: -20.7, y: 49, z: -22.2}
   modelNPoss:
-  - model: {fileID: 8274922205884750740, guid: 646f2ef60d742c94fa92ce4a52838843, type: 3}
+  - model: {fileID: 2963708156169640423, guid: ca3288e355c2359409e1054cfa6a4cc8, type: 3}
     img: {fileID: -1289595580, guid: 7ac9942a0e1126644844508954d88d5b, type: 3}
-    position: {x: 4, y: 0, z: 6}
+    position: {x: 5, y: 0, z: 6}
     rotation: {x: 0, y: 180, z: 0}
   - model: {fileID: 4179555347632450434, guid: 632000ffa19bc244db692e7872632d4c, type: 3}
     img: {fileID: -1289595580, guid: 7ac9942a0e1126644844508954d88d5b, type: 3}
