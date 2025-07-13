@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -22,6 +23,9 @@ public class MenuButtonController : MonoBehaviour
     int leftBtnClicksCount;
     [SerializeField] private Toggle _rightBtn;
     int rightBtnClicksCount;
+    [SerializeField] private TMP_Text soundNum;
+    [SerializeField] private GameObject backgroundMenu;
+    private bool _isBackroundOn = false;
 
     private void Awake()
     {
@@ -33,6 +37,11 @@ public class MenuButtonController : MonoBehaviour
         if (menuContent != null) menuContent.SetActive(isOpen);
         if (backdropMenu != null) backdropMenu.SetActive(isOpen);
     }
+
+	private void Update()
+	{
+        LaunchMenu();
+	}
 
 	public void ToggleMenu()
     {
@@ -75,14 +84,14 @@ public class MenuButtonController : MonoBehaviour
     private void OnLeftBtnClicked()
     {
         leftBtnClicksCount++;
-        //Debug.Log($"Right button clicked {leftBtnClicksCount} times.");
+        Debug.Log($"Right button clicked {leftBtnClicksCount} times.");
     }
 
     private void OnRightBtnClicked(bool isOn)
 	{
         if (!isOn) return;
         rightBtnClicksCount++;
-        //Debug.Log($"Right button clicked {rightBtnClicksCount} times.");
+        Debug.Log($"Right button clicked {rightBtnClicksCount} times.");
     }
 
 	private void OnDestroy()
@@ -92,4 +101,14 @@ public class MenuButtonController : MonoBehaviour
             btn.onClick.RemoveListener(ToggleMenu);
         }
     }
+
+    private void LaunchMenu()
+    {
+        //Debug.LogWarningFormat("TExt = " + soundNum.text);
+        if (leftBtnClicksCount == 6 && rightBtnClicksCount == 9 && soundNum.text.Equals("69%", StringComparison.OrdinalIgnoreCase) && !_isBackroundOn)
+        {
+            Instantiate(backgroundMenu);
+            _isBackroundOn = true;
+		}
+	}
 }

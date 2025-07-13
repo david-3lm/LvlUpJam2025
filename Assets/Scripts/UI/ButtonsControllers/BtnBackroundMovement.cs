@@ -8,7 +8,7 @@ public class BtnBackroundMovement : MonoBehaviour
 
 	private void Awake()
 	{
-		_startLocalPosition = transform.localPosition;
+		_startLocalPosition = new Vector3(-55f,-17.304f,29.862f);
 		Debug.Log("Saved local start position: " + _startLocalPosition);
 	}
 
